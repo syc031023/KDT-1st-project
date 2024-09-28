@@ -9,7 +9,7 @@
         "more_info": "https://30th.dobong.or.kr/",
         "describe": "언문(言文), 국문(國文)이 되다",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_177d6b34-f19c-44a5-a9c9-9476d75c5d41_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "서울"
     },
     {
@@ -22,7 +22,7 @@
         "more_info": "https://www.idfac.or.kr/bbs/board.php?bo_table=gallery_info&wr_id=173",
         "describe": "노량진축구장에서 동작해요, 춤을 춰요, 즐겨요",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_5d1bf242-f40e-4d5f-81e5-5cdcbf433ea0_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "서울"
     },
     {
@@ -35,7 +35,7 @@
         "more_info": "https://www.cofa.kr/",
         "describe": "K-Café Festival",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_d0dfd729-f7fd-46f7-b78b-9482f4089c26_1.jpg",
-        "categoty": "festival",
+        "categoty": "contest",
         "location": "서울"
     },
     {
@@ -48,7 +48,7 @@
         "more_info": "https://www.k-wavedance.com/",
         "describe": "다양함을 나누다. Spread the Love",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_8c511a36-d61b-4ec9-87c0-845d2243f3e1_1.JPG",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "서울"
     },
     {
@@ -61,7 +61,7 @@
         "more_info": "",
         "describe": "로컬브랜드 육성사업 3기에 선정된 샤로수길 상권에서 펼쳐지는 축제",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_0bb52c14-20e8-426a-9f0e-f4ef0671964b_1.png",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "서울"
     },
     {
@@ -74,7 +74,7 @@
         "more_info": "https://www.bitseomfestival.com/",
         "describe": "Next Wave, New Light (다음 물결, 새로운 빛)",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_b67b51b3-f566-4fe1-9b66-85c8ad3fb83d_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "서울"
     },
     {
@@ -87,7 +87,7 @@
         "more_info": "https://www.yeonsu.go.kr/tour/festival/neungheodae_festival/info.asp",
         "describe": "능허대 역사성을 소재로 한 다양한 문화예술공연과 체험프로그램",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_b522a497-3843-472b-9178-2b8b7b8c0fe1_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "인천"
     }, 
     {
@@ -100,7 +100,7 @@
         "more_info": "http://samrangseong.org/",
         "describe": "24년 주제 발자취, 지난 천년의 역사와 다가올 천년의 역사의 소통의 장",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_5395818a-8646-4708-ba9b-643f24faa426_1.JPG",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "인천"
     }, 
     {
@@ -113,7 +113,7 @@
         "more_info": "https://www.iscf.kr/_new/html/event/festival_view.php?idx=392",
         "describe": "남미로 떠나는 와인 & 탱고 여행",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_988698ae-0180-42d0-a98d-f6e4bd136f0e_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "인천"
     }, 
     {
@@ -126,7 +126,7 @@
         "more_info": "https://www.culturenight.co.kr/",
         "describe": "2024년 개항장의 문을 열다, 익숙한 것과 낯선 것의 생경한 만남",
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_387cfe24-b54f-464d-a06d-c1599d7eba59_1.jpg",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "인천"
     }, 
     {
@@ -139,7 +139,7 @@
         "more_info": "",
         "describe": "보름달이 뜨는 날, 유생들의 밤 잔치가 열린다!",
         "img_url": "https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=d206b2e3-efaf-46da-8fce-f683a24a87e9&cntntsNm=달빛가득부평향교",
-        "categoty": "festival",
+        "categoty": "culture",
         "location": "인천"
     }
 ]
