@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +7,7 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-</script>
+<script src="script.js"></script>
 <style>
     html {
         height: 100%;
@@ -80,6 +78,7 @@
         margin-top: 5px;
     }
 </style>
+<link rel="stylesheet" href="./event_list.css">
 
 <body>
     <table id="myTable">
@@ -87,17 +86,17 @@
             <tr class="selection">
                 <td>
                     <select name="지역" id="location">
-                        <option value="l0" selected>지역</option>
-                        <option value="l1">서울</option>
-                        <option value="l2">인천</option>
-                        <option value="l3">대전</option>
-                        <option value="l4">대구</option>
-                        <option value="l5">광주</option>
-                        <option value="l6">부산</option>
-                        <option value="l7">울산</option>
-                        <option value="l8">세종시</option>
-                        <option value="l9">경기도</option>
-                        <option value="l10">강원특별자치도</option>
+                        <option value="location" selected>지역</option>
+                        <option value="서울">서울</option>
+                        <option value="인천">인천</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="부산">부산</option>
+                        <option value="울산">울산</option>
+                        <option value="세종시">세종시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원특별자치도">강원특별자치도</option>
                         <option value="l11">충청북도</option>
                         <option value="l12">충청남도</option>
                         <option value="l13">경상북도</option>
@@ -109,20 +108,20 @@
                 </td>
                 <td>
                     <select id="category">
-                        <option value="c0" selected>카테고리</option>
+                        <option value="category" selected>카테고리</option>
                         <option value="culture">문화예술</option>
                         <option value="group_work">모임</option>
                         <option value="contest">대회</option>
                     </select>
                 </td>
                 <td>
-                    <button class="sortEvent" onclick="sortEvent()">찾기</button>
+                    <button class="sortEvent" onclick="filterEvents()">찾기</button>
                 </td>
                 
             </tr>
         </thead>
         <tbody id="tbody">
-            <tr>
+            <!-- <tr>
                 <td class="content">
                     <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_960ad560-7409-4c22-9673-1cbce3b0b8ba_1.jpg"
                         alt="강동북페스티벌">
@@ -297,8 +296,7 @@
                 </td>
             </tr>
             
-        </tbody>
+        </tbody> -->
     </table>
 </body>
-
 </html>

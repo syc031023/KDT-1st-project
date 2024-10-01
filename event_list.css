@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 900vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#location {
+    width: 230px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+#category {
+    width: 230px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.sortEvent {
+    height: 40px;
+    width: 80px;
+    margin: 0 10px;
+    border: 0.5px solid black;
+    border-radius: 5%;
+}
+
+td{
+    width: 230px;
+}
+
+.content {
+    width: 250px;
+    height: 320px;
+    margin: 0px;
+}
+
+.content img {
+    position: relative;
+    left: 10px;
+    margin-top: 20px;
+    width: 230px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.info {
+    width: 230px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.info h3,
+p {
+    margin: 0;
+    margin-top: 5px;
+}
