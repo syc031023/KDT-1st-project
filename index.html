@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 내비게이션 바</title>
+    <!-- 네비바 css -->
+    <link rel="stylesheet" href="/hjmain.html/mp.css">
+</head>
+
+<body>
+    <!-- 네비바 -->
+    <nav class="navbar">
+        <div class="logo">로고</div>
+        <!-- 메뉴 -->
+        <ul class="nav-links">
+            <li><a href="#">전국 이벤트</a></li>
+            <li><a href="#">달력</a></li>
+        </ul>
+        <!-- 서치바 -->
+        <form class="sear" role="search">
+            <input class="searin" type="search" placeholder="Search" aria-label="Search" />
+            <button class="searbt" type="submit">
+                검색
+            </button>
+        </form>
+        <!-- 버튼 -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+
+    <!-- 중간 베너 -->
+
+    <!-- 네비바 코드 -->
+    <script src="/hjmain.html/mp.js"></script>
+
+    {% block section %}
+
+    {% endblock section %}
+</body>
+
+</html>
