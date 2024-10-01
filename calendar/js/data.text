@@ -1,6 +1,6 @@
 충청북도 데이터 3 Start
       {
-        "id" : "Chungju-01",
+        "id" : "Chungbuk-01",
         "name":"우륵문화제",
         "startDate":"2024-10-02",
         "endDate": "2024-10-06",
@@ -18,7 +18,7 @@
       },
     
       {
-        "id" : "Chungju-02",
+        "id" : "Chungbuk-02",
         "name":"보은 회인 문화유산 야행",
         "startDate":"2024-10-03",
         "endDate": "2024-10-05",
@@ -35,7 +35,7 @@
         "location": "충청북도 충주시",
       },
       {
-        "id" : "Chungju-03",
+        "id" : "Chungbuk-03",
         "name":"세종대왕과 초정약수축제",
         "startDate":"2024-10-11",
         "endDate": "2024-10-13",
@@ -55,7 +55,7 @@
     
     // 충청남도 데이터 4 start
       {
-        "id" : "Chungcheong-01",
+        "id" : "Chungnam-01",
         "name":"서산해미읍성축제",
         "startDate":"2024-10-02",
         "endDate": "2024-10-05",
@@ -73,7 +73,7 @@
       },
     
       {
-        "id" : "Chungcheong-02",
+        "id" : "Chungnam-02",
         "name":"아트밸리 아산 재즈패스티벌 with 자라섬",
         "startDate":"2024-10-18",
         "endDate": "2024-10-20",
@@ -91,7 +91,7 @@
       },
     
       {
-        "id" : "Chungcheong-03",
+        "id" : "Chungnam-03",
         "name":"백제고도부여국화축제",
         "startDate":"2024-10-25",
         "endDate": "2024-11-03",
@@ -109,7 +109,7 @@
       },
     
       {
-        "id" : "Chungcheong-04",
+        "id" : "Chungnam-04",
         "name":"천리포수모권 가을축제",
         "startDate":"2024-10-19",
         "endDate": "2024-11-03",
@@ -184,7 +184,7 @@
     
     // 경상남도 데이터 2 start
     {
-      "id" : "Gyeongsangnam-do-01",
+      "id" : "Gyeongnam-01",
       "name":"거제 시민의 날",
       "startDate":"2024-10-04",
       "endDate": "2024-10-06",
@@ -201,7 +201,7 @@
       "location": "경상남도 거제시",
     },
     {
-      "id" : "Gyeongsangnam-do-02",
+      "id" : "Gyeongnam-01",
       "name":"가야문화축제",
       "startDate":"2024-10-16",
       "endDate": "2024-10-20",

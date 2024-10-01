@@ -2,9 +2,9 @@ $(document).ready(function(){
 
   // 샘플데이터
 const festdata = [
-// 청주데이터 3 Start
+  //충청북도 데이터 3 Start
   {
-    "id" : "Chungju-01",
+    "id" : "Chungbuk-01",
     "name":"우륵문화제",
     "startDate":"2024-10-02",
     "endDate": "2024-10-06",
@@ -22,7 +22,7 @@ const festdata = [
   },
 
   {
-    "id" : "Chungju-02",
+    "id" : "Chungbuk-02",
     "name":"보은 회인 문화유산 야행",
     "startDate":"2024-10-03",
     "endDate": "2024-10-05",
@@ -39,7 +39,7 @@ const festdata = [
     "location": "충청북도 충주시",
   },
   {
-    "id" : "Chungju-03",
+    "id" : "Chungbuk-03",
     "name":"세종대왕과 초정약수축제",
     "startDate":"2024-10-11",
     "endDate": "2024-10-13",
@@ -59,7 +59,7 @@ const festdata = [
 
 // 충청남도 데이터 4 start
   {
-    "id" : "Chungcheong-01",
+    "id" : "Chungnam-01",
     "name":"서산해미읍성축제",
     "startDate":"2024-10-02",
     "endDate": "2024-10-05",
@@ -77,7 +77,7 @@ const festdata = [
   },
 
   {
-    "id" : "Chungcheong-02",
+    "id" : "Chungnam-02",
     "name":"아트밸리 아산 재즈패스티벌 with 자라섬",
     "startDate":"2024-10-18",
     "endDate": "2024-10-20",
@@ -95,7 +95,7 @@ const festdata = [
   },
 
   {
-    "id" : "Chungcheong-03",
+    "id" : "Chungnam-03",
     "name":"백제고도부여국화축제",
     "startDate":"2024-10-25",
     "endDate": "2024-11-03",
@@ -113,7 +113,7 @@ const festdata = [
   },
 
   {
-    "id" : "Chungcheong-04",
+    "id" : "Chungnam-04",
     "name":"천리포수모권 가을축제",
     "startDate":"2024-10-19",
     "endDate": "2024-11-03",
@@ -188,7 +188,7 @@ const festdata = [
 
 // 경상남도 데이터 2 start
 {
-  "id" : "Gyeongsangnam-do-01",
+  "id" : "Gyeongnam-01",
   "name":"거제 시민의 날",
   "startDate":"2024-10-04",
   "endDate": "2024-10-06",
@@ -205,7 +205,7 @@ const festdata = [
   "location": "경상남도 거제시",
 },
 {
-  "id" : "Gyeongsangnam-do-02",
+  "id" : "Gyeongnam-01",
   "name":"가야문화축제",
   "startDate":"2024-10-16",
   "endDate": "2024-10-20",
@@ -282,7 +282,7 @@ const festdata = [
 
 // 전라남도  3개 start
 {
-  "id" : "Jeollanam-do-01",
+  "id" : "jeonnam-01",
   "name":"명량대첩축제",
   "startDate":"2024-10-18",
   "endDate": "2024-10-20",
@@ -299,7 +299,7 @@ const festdata = [
   "location": "전북특별자치도 전주시",
 },
 {
-  "id" : "Jeollanam-do-02",
+  "id" : "jeonnam-02",
   "name":"벌교꼬막축제",
   "startDate":"2024-10-27",
   "endDate": "2024-10-29",
@@ -316,7 +316,7 @@ const festdata = [
   "location": "전라남도 보성군",
 },
 {
-  "id" : "Jeollanam-do-03",
+  "id" : "jeonnam-03",
   "name":"대한민국 국항대전",
   "startDate":"2024-10-18",
   "endDate": "2024-11-03",
@@ -371,7 +371,6 @@ const festdata = [
   "location": "제주도 제주시",
 },
 // 제주도  2개 end
-
 
 
 
@@ -598,7 +597,7 @@ function Datehendel() {
         listWrap.append(
           `
           <div class = "list-wr-box">
-              <a href = "#">
+              <a href = "/calendar/detail.html?id=${festval['id']}" target="_blank">
                 <div class="wr-img" style="background-image: url('${festval.img_url}');"></div>
               </a>
               <div class="wr-title">${festval['name']}</div>
