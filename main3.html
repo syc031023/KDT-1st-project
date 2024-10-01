@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<style>
+    @media screen and (max-width: 700px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 8px 24px;
+        }
+
+        .navbar_menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar_menu li {
+            width: 100px;
+            text-align: center;
+        }
+
+        .navbar_logo {
+            position: absolute;
+            left: 0;
+            margin: 10px;
+        }
+
+        .navbar-togglebtn {
+            display: block;
+        }
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aquamarine;
+        padding: 0 5px;
+    }
+
+    .navbar_menu {
+        display: flex;
+        padding-left: 0;
+    }
+
+    .navbar_menu li {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    .navbar_menu li:hover {
+        font-style: italic;
+    }
+
+    .search {
+        padding: 10px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-togglebtn {
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+        display: none;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="logo"></i>
+            <a class="logo" href="#">문화人</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="#">전체 이벤트</a></li>
+            <li><a href="#">달력</a></li>
+        </ul>
+        <div class="search">
+            <form role="search">
+                <input class="searin" type="search" placeholder="Search" />
+                <button class="searbt" type="submit">
+                    검색
+                </button>
+            </form>
+        </div>
+        <a href="#" class="navbar-togglebtn">
+            <button style="width: 50px; height: 10px;"></button>
+            <!-- <i class="fa-solid fa-burger"></i> -->
+        </a>
+    </nav>
+
+</body>
+
+</html>
