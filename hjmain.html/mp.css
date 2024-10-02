@@ -1,3 +1,5 @@
+/* 네비바 css */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .navbar {
@@ -72,8 +76,9 @@ body {
     position: absolute;
     top: 70px;
     left: 0;
-    width: 100%;
+    width: 70%;
     background-color: #333;
+    margin-left: 15%;
   }
 
   .nav-links.active {
@@ -93,8 +98,9 @@ body {
     position: absolute;
     top: 113px;
     left: 0px;
-    width: 100%;
+    width: 70%;
     background-color: #333;
+    margin-left: 15%;
   }
   .sear.active {
     display: flex;
@@ -103,5 +109,154 @@ body {
     align-items: center;
     background-color: #333;
     margin-top: 30px;
+  }
+}
+
+/* 중간베너 css */
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+}
+
+.carousel-slide div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: #333;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.241);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 250px;
+  }
+  .carousel-container.active {
+    margin-top: 160px;
+  }
+}
+
+/* 카드 css */
+.bocls {
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* .card-container::-webkit-scrollbar {
+  display: none;
+} */
+
+.card {
+  flex: 0 0 30%;
+  /* 카드가 3개씩 보이도록 설정 */
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 4%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  border-radius: 4%;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.241);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  /* border-radius: 50%; */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.btd {
+  display: flex;
+  justify-content: center;
+}
+
+.cbt {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 80%;
+    /* 작은 화면에서는 카드 1개씩 보이도록 설정 */
   }
 }

@@ -11,6 +11,8 @@
 
 <body>
     <!-- 네비바 -->
+
+
     <nav class="navbar">
         <div class="logo">로고</div>
         <!-- 메뉴 -->
@@ -34,13 +36,68 @@
     </nav>
 
 
+
     <!-- 중간 베너 -->
 
 
 
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <div><img src="/사진/01.jpg" alt="Slide 1"></div>
+            <div><img src="/사진/02.jpg" alt="Slide 2"></div>
+            <div><img src="/사진/trval03.jfif" alt="Slide 3"></div>
+        </div>
+
+        <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+    </div>
 
 
 
+
+    <!-- 카드 -->
+
+    <div class="bocls">
+        <div class="btd">
+            <button class="cbt">지역별</button>
+            <button class="cbt">진행중인 축제</button>
+        </div>
+        <div style="position: relative;">
+
+            <button class="scroll-button prev" onclick="scrollLeft1()">&#10094;</button>
+
+            <div class="card-container" id="cardContainer">
+                <div class="card">
+                    <img src="/사진/01.jpg" alt="Card 1">
+                    <h3>카드 제목 1</h3>
+                    <p>이것은 카드 1에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/02.jpg" alt="Card 2">
+                    <h3>카드 제목 2</h3>
+                    <p>이것은 카드 2에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/trval03.jfif" alt="Card 3">
+                    <h3>카드 제목 3</h3>
+                    <p>이것은 카드 3에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/01.jpg" alt="Card 4">
+                    <h3>카드 제목 4</h3>
+                    <p>이것은 카드 4에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/02.jpg" alt="Card 5">
+                    <h3>카드 제목 5</h3>
+                    <p>이것은 카드 5에 대한 설명입니다.</p>
+                </div>
+            </div>
+
+            <button class="scroll-button next" onclick="scrollRight()">&#10095;</button>
+
+        </div>
+    </div>
 
 
 
