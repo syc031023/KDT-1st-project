@@ -797,7 +797,7 @@ const festdata = [
         "more_info" : "https://www.chollipo.org/board/bbs/board.php?bo_table=clp_newnews&wr_id=2173&menuKey=68",
         "describe": "메인프로그램 : 천리포수목원 책바슴",
         "detail": "천리포수목원에서 계절의 정취를 담은 '2024 천리포수목원 가을축제'가 개최된다. 축제는 오는 10월 19일부터 11월 3일까지 16일간 진행되며, 그 중 10월 19일부터 20일까지 양일간은 북페어 '2024 천리포수목원 책바슴'을 개최한다. 수목원에서 열리는 북페어는 국내 최초로, 이 기간 정세랑 작가와 함께하는 북토크 등 다양한 프로그램이 마련돼 기대감을 높인다.",
-        "img_url":"://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_e0855154-b549-488c-88d6-2a5c1f4fd0df_1.JPG",
+        "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_e0855154-b549-488c-88d6-2a5c1f4fd0df_1.JPG",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/e0855154-b549-488c-88d6-2a5c1f4fd0df_3.jpg",
         "category": "culture",
         "location": "충청남도 태안군",
