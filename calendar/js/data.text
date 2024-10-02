@@ -278,7 +278,7 @@
     
     // 전라남도  3개 start
     {
-      "id" : "Jeollanam-do-01",
+      "id" : "jeonnam-01",
       "name":"명량대첩축제",
       "startDate":"2024-10-18",
       "endDate": "2024-10-20",
@@ -295,7 +295,7 @@
       "location": "전북특별자치도 전주시",
     },
     {
-      "id" : "Jeollanam-do-02",
+      "id" : "jeonnam-02",
       "name":"벌교꼬막축제",
       "startDate":"2024-10-27",
       "endDate": "2024-10-29",
@@ -312,7 +312,7 @@
       "location": "전라남도 보성군",
     },
     {
-      "id" : "Jeollanam-do-03",
+      "id" : "jeonnam-03",
       "name":"대한민국 국항대전",
       "startDate":"2024-10-18",
       "endDate": "2024-11-03",
