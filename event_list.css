@@ -1,0 +1,186 @@
+/* html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+} */
+
+section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  .sear {
+    display: flex;
+  }
+  .searin {
+    width: 200px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+  }
+  
+  .searbt {
+    width: 50px;
+    height: 30px;
+    margin-left: 13px;
+  }
+  
+  /* 반응형 디자인 */
+  /* 반응형 디자인 */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 70%;
+      background-color: #333;
+      margin-left: 15%;
+    }
+  
+    /* Fix the selector by adding a dot before active */
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links.active li {
+      position: relative;
+      margin-top: 15px;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .sear {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 113px;
+      left: 0px;
+      width: 70%;
+      background-color: #333;
+      margin-left: 15%;
+    }
+  
+    .sear.active {
+      display: flex;
+      flex-direction: row;
+      height: 70px;
+      align-items: center;
+      background-color: #333;
+      margin-top: 30px;
+    }
+  }
+  
+
+
+
+
+#location {
+    width: 230px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+#category {
+    width: 230px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.sortEvent {
+    height: 40px;
+    width: 80px;
+    margin: 0 10px;
+    border: 0.5px solid black;
+    border-radius: 5%;
+}
+
+td{
+    width: 230px;
+}
+
+.content {
+    width: 250px;
+    height: 320px;
+    margin: 0px;
+}
+
+.content img {
+    position: relative;
+    left: 10px;
+    margin-top: 20px;
+    width: 230px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.info {
+    width: 230px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.info h3,
+p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+
