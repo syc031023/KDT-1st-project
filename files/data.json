@@ -1,4 +1,4 @@
-const festdata = [
+[
     {
         "id": "Seoul-01",
         "name": "도봉한글잔치",
@@ -691,7 +691,7 @@ const festdata = [
         "img_url":"//kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_32c38244-ca3a-4b7c-9e04-d6cf7a8a987c_1.jpg",
         "poster_url":"//kfescdn.visitkorea.or.kr/kfes/upload/contents/db/32c38244-ca3a-4b7c-9e04-d6cf7a8a987c_3.png",
         "category": "culture",
-        "location": "충청북도 충주시",
+        "location": "충청북도 충주시"
       },
     
       {
@@ -709,7 +709,7 @@ const festdata = [
         "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_3eaa264f-cab5-464a-900a-05c02432371b_1.jpg",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/3eaa264f-cab5-464a-900a-05c02432371b_3.png",
         "category": "culture",
-        "location": "충청북도 충주시",
+        "location": "충청북도 충주시"
       },
       {
         "id" : "Chungbuk-03",
@@ -726,11 +726,8 @@ const festdata = [
         "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_d86c5d13-6e48-42d9-bb10-68cda235473b_1.jpg",
         "poster_url": "https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do?fstvlCntntsId=d86c5d13-6e48-42d9-bb10-68cda235473b&cntntsNm=%EC%84%B8%EC%A2%85%EB%8C%80%EC%99%95%EA%B3%BC%EC%B4%88%EC%A0%95%EC%95%BD%EC%88%98%EC%B6%95%EC%A0%9C#none",
         "category": "culture",
-        "location": "충청북도 충주시",
+        "location": "충청북도 충주시"
       },
-    // 청주데이터 3 end
-    
-    // 충청남도 데이터 4 start
       {
         "id" : "Chungnam-01",
         "name":"서산해미읍성축제",
@@ -746,7 +743,7 @@ const festdata = [
         "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_edf5996d-f34f-476c-9d32-358e72bdf46a_1.jpg",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/edf5996d-f34f-476c-9d32-358e72bdf46a_3.jpg",
         "category": "art",
-        "location": "충청남도 서산시",
+        "location": "충청남도 서산시"
       },
     
       {
@@ -764,7 +761,7 @@ const festdata = [
         "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_73a71c93-bae8-4ed6-9d9c-b7528e748e83_1.png",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/73a71c93-bae8-4ed6-9d9c-b7528e748e83_3.png",
         "category": "culture",
-        "location": "충청남도 아산시",
+        "location": "충청남도 아산시"
       },
     
       {
@@ -782,7 +779,7 @@ const festdata = [
         "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_63d35fa7-b042-484a-b91a-c7bb44ac496f_1.JPG",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/63d35fa7-b042-484a-b91a-c7bb44ac496f_3.jpg",
         "category": "culture",
-        "location": "충청남도 부여군",
+        "location": "충청남도 부여군"
       },
     
       {
@@ -800,11 +797,8 @@ const festdata = [
         "img_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_e0855154-b549-488c-88d6-2a5c1f4fd0df_1.JPG",
         "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/e0855154-b549-488c-88d6-2a5c1f4fd0df_3.jpg",
         "category": "culture",
-        "location": "충청남도 태안군",
+        "location": "충청남도 태안군"
       },
-    // 충청남도 데이터 4 end
-    
-    // 경상북도 데이터 3 start
     {
       "id" : "GyeongsanBuk-01",
       "name":"영덕국제H웰니스페스타",
@@ -820,7 +814,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_54755072-c2de-4e66-8e22-11b949178a1f_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/54755072-c2de-4e66-8e22-11b949178a1f_3.jpg",
       "category": "art",
-      "location": "경상북도 영도군",
+      "location": "경상북도 영도군"
     },
     {
       "id" : "GyeongsanBuk-02",
@@ -837,7 +831,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_1783d7c6-3567-42c8-81da-3356b46ae354_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/1783d7c6-3567-42c8-81da-3356b46ae354_3.png",
       "category": "art",
-      "location": "경상북도 청도군",
+      "location": "경상북도 청도군"
     },
     
     {
@@ -855,11 +849,8 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_4d9f044e-d3e8-4623-8206-6c3c6ef76c66_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/4d9f044e-d3e8-4623-8206-6c3c6ef76c66_3.jpg",
       "category": "culture",
-      "location": "경상북도 구미시",
+      "location": "경상북도 구미시"
     },
-    // 경상북도 데이터 3 end
-    
-    // 경상남도 데이터 2 start
     {
       "id" : "Gyeongnam-01",
       "name":"거제 시민의 날",
@@ -875,7 +866,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_066ec7c7-e7f8-4630-9f3f-bc9ae57fd081_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/066ec7c7-e7f8-4630-9f3f-bc9ae57fd081_3.jpg",
       "category": "culture",
-      "location": "경상남도 거제시",
+      "location": "경상남도 거제시"
     },
     {
       "id" : "Gyeongnam-01",
@@ -892,11 +883,8 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_578125d3-7e44-420f-925e-fbd13e8c73c9_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/578125d3-7e44-420f-925e-fbd13e8c73c9_3.JPG",
       "category": "culture",
-      "location": "경상남도 김해시",
+      "location": "경상남도 김해시"
     },
-    // 경상남도 데이터2 end
-    
-    // 전북 데이터 3개 start
     {
       "id" : "Jeonbuk-01",
       "name":"진안홍삼축제",
@@ -912,9 +900,8 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_fdb11408-6de8-46ea-b051-faac6fc020a7_1.png",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/697f4800-8c4d-4740-bfe6-51ad34192f31_3.jpg",
       "category": "culture",
-      "location": "전북특별자치도 진안군",
+      "location": "전북특별자치도 진안군"
     },
-    
     {
       "id" : "Jeonbuk-02",
       "name":"전주예술난장",
@@ -930,7 +917,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_9aea2c83-14ea-40e6-85d9-a3e8cfce3432_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/9aea2c83-14ea-40e6-85d9-a3e8cfce3432_3.jpeg",
       "category": "art",
-      "location": "전북특별자치도 전주시",
+      "location": "전북특별자치도 전주시"
     },
     
     {
@@ -948,12 +935,8 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_518c24d3-309a-40a1-90a0-01dc354772c7_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/518c24d3-309a-40a1-90a0-01dc354772c7_3.jpg",
       "category": "art",
-      "location": "전북특별자치도 전주시",
+      "location": "전북특별자치도 전주시"
     },
-    // 전북 데이터 3개 end
-    
-    
-    // 전라남도  3개 start
     {
       "id" : "jeonnam-01",
       "name":"명량대첩축제",
@@ -969,7 +952,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_7dfae381-566f-4f5e-9d5e-650a90d24d97_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/7dfae381-566f-4f5e-9d5e-650a90d24d97_3.jpg",
       "category": "culture",
-      "location": "전북특별자치도 전주시",
+      "location": "전북특별자치도 전주시"
     },
     {
       "id" : "jeonnam-02",
@@ -986,7 +969,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_8ccbe9bc-55a1-48eb-bf2b-29cf499152ea_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/8ccbe9bc-55a1-48eb-bf2b-29cf499152ea_3.jpg",
       "category": "culture",
-      "location": "전라남도 보성군",
+      "location": "전라남도 보성군"
     },
     {
       "id" : "jeonnam-03",
@@ -1003,11 +986,8 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_7828d5f4-9b6a-42c8-90bb-3ca13479e6a6_1.JPG",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/7828d5f4-9b6a-42c8-90bb-3ca13479e6a6_3.jpg",
       "category": "culture",
-      "location": "전라남도 함평군",
+      "location": "전라남도 함평군"
     },
-    // 전라남도  3개 end
-    
-    // 제주도 데이터
     {
       "id" : "Jeju-01",
       "name":"생태관광주간",
@@ -1023,7 +1003,7 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_c8fa1db5-5288-4225-a824-622f198a6ab7_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/c8fa1db5-5288-4225-a824-622f198a6ab7_3.jpg",
       "category": "culture",
-      "location": "제주도 제주시",
+      "location": "제주도 제주시"
     },
     
     {
@@ -1041,88 +1021,6 @@ const festdata = [
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_d5dfae4f-39f7-40a3-b80d-b045c0a39c48_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/d5dfae4f-39f7-40a3-b80d-b045c0a39c48_3.png",
       "category": "culture",
-      "location": "제주도 제주시",
+      "location": "제주도 제주시"
     }
 ]
-
-
-
-// 필터링된 이벤트를 표시하는 함수
-function filterEvents() {
-    let selectedLocation = $("#location").val(); // 선택한 지역
-    let selectedCategory = $("#category").val(); // 선택한 카테고리
-
-    // 축제 데이터를 필터링하여 조건에 맞는 축제만 반환
-    let filteredFestivals = festdata.filter(event => {
-
-        // location을 띄어쓰기 기준으로 split하여 첫 번째 단어와 비교
-        if(selectedLocation === "location" || event.location.split(' ')[0] === selectedLocation || !selectedLocation){
-            locationMatch = true; // 지역이 일치할 경우 true
-        } else{ 
-            locationMatch = false; // 지역이 일치하지 않으면 false
-        }
-
-        // 카테고리 조건을 확인
-        if(selectedCategory === "category" || event.category === selectedCategory || !selectedCategory){
-            categoryMatch = true; // 카테고리가 일치할 경우 true
-        }
-        else{ 
-            categoryMatch = false; // 카테고리가 일치하지 않으면 false
-        }
-
-        // 지역과 카테고리 조건이 모두 맞는 경우에만 반환
-        return locationMatch && categoryMatch;
-    });
-
-    // 필터링된 축제 데이터를 화면에 표시
-    displayFestivals(filteredFestivals);
-}
-
-// 필터링된 축제 데이터를 표시하는 함수
-function displayFestivals(festivals) {
-    let tbody = $("#tbody"); // 데이터를 표시할 테이블의 tbody 요소
-    tbody.empty(); // 기존 내용을 초기화
-
-    // 필터링된 결과가 없을 경우 메시지 출력
-    if (festivals.length === 0) {
-        tbody.append(`<tr><td colspan="3">조건에 맞는 결과가 없습니다.</td></tr>`);
-        return;
-    }
-
-    let rows = '';
-    // 필터링된 축제 데이터를 테이블에 3개씩 나열
-    festivals.forEach((event, index) => {
-        // 3개의 td 요소를 하나의 tr에 배치 (한 행에 3개씩)
-        if (index % 3 === 0) rows += '<tr>';
-        rows += `
-            <td class="content">
-                <a href= "/Users/song-youngchae/Documents/GitHub/KDT-1st-project/detailPage/html/detail.html?id=${event['id']}" target="_blank">
-                    <img src="${event.img_url}" alt="${event.name}">
-                </a>
-                <div class="info">
-                    <h3>${event.name}</h3>
-                    <p class="duration">${event.startDate} ~ ${event.endDate}</p>
-                    <p class="location">${event.location}</p>
-                </div>
-            </td>
-        `;
-        if ((index + 1) % 3 === 0) rows += '</tr>'; // 한 행 끝날 때 닫음
-    });
-
-    // 마지막 행이 3개로 채워지지 않았다면 빈 td 추가
-    let remainingCells = festivals.length % 3;
-    if (remainingCells !== 0) {
-        for (let i = 0; i < 3 - remainingCells; i++) {
-            rows += '<td class="content"></td>'; // 빈 셀 채우기
-        }
-        rows += '</tr>';
-    }
-
-    // 완성된 행을 tbody에 추가
-    tbody.append(rows);
-}
-
-// 페이지 로드 시 모든 축제 데이터를 초기화면에 표시
-$(document).ready(function() {
-    displayFestivals(festdata); // 초기 화면에 모든 축제 표시
-});

@@ -1,4 +1,4 @@
-[
+const festdata = [
     {
         "id": "Seoul-01",
         "name": "도봉한글잔치",
@@ -1003,7 +1003,7 @@
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_7828d5f4-9b6a-42c8-90bb-3ca13479e6a6_1.JPG",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/7828d5f4-9b6a-42c8-90bb-3ca13479e6a6_3.jpg",
       "category": "culture",
-      "location": "전라남도 함평군"
+      "location": "전라남도 함평군",
     },
     // 전라남도  3개 end
     
@@ -1023,7 +1023,7 @@
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_c8fa1db5-5288-4225-a824-622f198a6ab7_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/c8fa1db5-5288-4225-a824-622f198a6ab7_3.jpg",
       "category": "culture",
-      "location": "제주도 제주시"
+      "location": "제주도 제주시",
     },
     
     {
@@ -1041,6 +1041,88 @@
       "img_url":"https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_d5dfae4f-39f7-40a3-b80d-b045c0a39c48_1.jpg",
       "poster_url": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/d5dfae4f-39f7-40a3-b80d-b045c0a39c48_3.png",
       "category": "culture",
-      "location": "제주도 제주시"
+      "location": "제주도 제주시",
     }
 ]
+
+
+
+// 필터링된 이벤트를 표시하는 함수
+function filterEvents() {
+    let selectedLocation = $("#location").val(); // 선택한 지역
+    let selectedCategory = $("#category").val(); // 선택한 카테고리
+
+    // 축제 데이터를 필터링하여 조건에 맞는 축제만 반환
+    let filteredFestivals = festdata.filter(event => {
+
+        // location을 띄어쓰기 기준으로 split하여 첫 번째 단어와 비교
+        if(selectedLocation === "location" || event.location.split(' ')[0] === selectedLocation || !selectedLocation){
+            locationMatch = true; // 지역이 일치할 경우 true
+        } else{ 
+            locationMatch = false; // 지역이 일치하지 않으면 false
+        }
+
+        // 카테고리 조건을 확인
+        if(selectedCategory === "category" || event.category === selectedCategory || !selectedCategory){
+            categoryMatch = true; // 카테고리가 일치할 경우 true
+        }
+        else{ 
+            categoryMatch = false; // 카테고리가 일치하지 않으면 false
+        }
+
+        // 지역과 카테고리 조건이 모두 맞는 경우에만 반환
+        return locationMatch && categoryMatch;
+    });
+
+    // 필터링된 축제 데이터를 화면에 표시
+    displayFestivals(filteredFestivals);
+}
+
+// 필터링된 축제 데이터를 표시하는 함수
+function displayFestivals(festivals) {
+    let tbody = $("#tbody"); // 데이터를 표시할 테이블의 tbody 요소
+    tbody.empty(); // 기존 내용을 초기화
+
+    // 필터링된 결과가 없을 경우 메시지 출력
+    if (festivals.length === 0) {
+        tbody.append(`<tr><td colspan="3">조건에 맞는 결과가 없습니다.</td></tr>`);
+        return;
+    }
+
+    let rows = '';
+    // 필터링된 축제 데이터를 테이블에 3개씩 나열
+    festivals.forEach((event, index) => {
+        // 3개의 td 요소를 하나의 tr에 배치 (한 행에 3개씩)
+        if (index % 3 === 0) rows += '<tr>';
+        rows += `
+            <td class="content">
+                <a href= "../html/detail.html?id=${event['id']}" target="_blank">
+                    <img src="${event.img_url}" alt="${event.name}">
+                </a>
+                <div class="info">
+                    <h3>${event.name}</h3>
+                    <p class="duration">${event.startDate} ~ ${event.endDate}</p>
+                    <p class="location">${event.location}</p>
+                </div>
+            </td>
+        `;
+        if ((index + 1) % 3 === 0) rows += '</tr>'; // 한 행 끝날 때 닫음
+    });
+
+    // 마지막 행이 3개로 채워지지 않았다면 빈 td 추가
+    let remainingCells = festivals.length % 3;
+    if (remainingCells !== 0) {
+        for (let i = 0; i < 3 - remainingCells; i++) {
+            rows += '<td class="content"></td>'; // 빈 셀 채우기
+        }
+        rows += '</tr>';
+    }
+
+    // 완성된 행을 tbody에 추가
+    tbody.append(rows);
+}
+
+// 페이지 로드 시 모든 축제 데이터를 초기화면에 표시
+$(document).ready(function() {
+    displayFestivals(festdata); // 초기 화면에 모든 축제 표시
+});
