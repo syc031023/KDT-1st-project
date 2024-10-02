@@ -93,11 +93,13 @@
     const navLinks = document.querySelector(".nav-links");
     const sear1 = document.querySelector(".sear");
 
+    const section = document.querySelector("section");
 
     // 반응형 배너
     menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   sear1.classList.toggle("active");
+  
   console.log("Menu links:", navLinks.classList);
   console.log("Search bar:", sear1.classList);
 });
