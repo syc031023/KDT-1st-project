@@ -1,302 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>event_list</title>
 </head>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<style>
-    html {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
 
-    body {
-        width: 900vw;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #location {
-        width: 230px;
-        height: 40px;
-        margin: 0 10px;
-    }
-
-    #category {
-        width: 230px;
-        height: 40px;
-        margin: 0 10px;
-    }
-
-    .sortEvent {
-        height: 40px;
-        width: 80px;
-        margin: 0 10px;
-        border: 0.5px solid black;
-        border-radius: 5%;
-    }
-
-    td{
-        width: 230px;
-    }
-
-    .content {
-        width: 250px;
-        height: 320px;
-        margin: 0px;
-    }
-
-    .content img {
-        position: relative;
-        left: 10px;
-        margin-top: 20px;
-        width: 230px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 5%;
-    }
-
-    .info {
-        width: 230px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-
-    .info h3,
-    p {
-        margin: 0;
-        margin-top: 5px;
-    }
-</style>
+<script src="./event_list.js"></script>
 <link rel="stylesheet" href="./event_list.css">
 
+
 <body>
-    <table id="myTable">
-        <thead>
-            <tr class="selection">
-                <td>
-                    <select name="지역" id="location">
-                        <option value="location" selected>지역</option>
-                        <option value="서울">서울</option>
-                        <option value="인천">인천</option>
-                        <option value="대전">대전</option>
-                        <option value="대구">대구</option>
-                        <option value="광주">광주</option>
-                        <option value="부산">부산</option>
-                        <option value="울산">울산</option>
-                        <option value="세종시">세종시</option>
-                        <option value="경기도">경기도</option>
-                        <option value="강원특별자치도">강원특별자치도</option>
-                        <option value="l11">충청북도</option>
-                        <option value="l12">충청남도</option>
-                        <option value="l13">경상북도</option>
-                        <option value="l14">경상남도</option>
-                        <option value="l15">전북특별자치도</option>
-                        <option value="l16">전라남도</option>
-                        <option value="l17">제주도</option>
-                    </select>
-                </td>
-                <td>
-                    <select id="category">
-                        <option value="category" selected>카테고리</option>
-                        <option value="culture">문화예술</option>
-                        <option value="group_work">모임</option>
-                        <option value="contest">대회</option>
-                    </select>
-                </td>
-                <td>
-                    <button class="sortEvent" onclick="filterEvents()">찾기</button>
-                </td>
-                
-            </tr>
-        </thead>
-        <tbody id="tbody">
-            <!-- <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_960ad560-7409-4c22-9673-1cbce3b0b8ba_1.jpg"
-                        alt="강동북페스티벌">
-                    <div class="info">
-                        <h3>강동북페스티벌</h3>
-                        <p class="duration">2024.09.28 ~ 2024.09.28</p>
-                        <p class="location">서울 강동구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-                <td class="content">
-                    <img src="https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11412edc-877b-4cd2-8145-05b4d3e2a0bf_1.JPG"
-                        alt="">
-                    <div class="info">
-                        <h3>강북 캠퍼스 피크닉</h3>
-                        <p class="ducation">2024.09.28 ~ 2024.09.29</p>
-                        <p class="location">서울 강북구</p>
-                    </div>
-                </td>
-            </tr>
-            
-        </tbody> -->
-    </table>
+    <nav class="navbar">
+        <div class="logo">로고</div>
+        <!-- 메뉴 -->
+        <ul class="nav-links">
+            <li><a href="#">전국 이벤트</a></li>
+            <li><a href="#">달력</a></li>
+        </ul>
+        <!-- 서치바 -->
+        <form class="sear" role="search">
+            <input class="searin" type="search" placeholder="Search" aria-label="Search" />
+            <button class="searbt" type="submit">
+                검색
+            </button>
+        </form>
+        <!-- 버튼 -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <br><br>
+    <section>
+        <div class="selection">
+            <!-- 지역별 카테고리 생성 -->
+            <select name="지역" id="location">
+                <option value="location" selected>지역</option>
+                <option value="서울">서울</option>
+                <option value="인천">인천</option>
+                <option value="대전">대전</option>
+                <option value="대구">대구</option>
+                <option value="광주">광주</option>
+                <option value="부산">부산</option>
+                <option value="울산">울산</option>
+                <option value="세종시">세종시</option>
+                <option value="경기도">경기도</option>
+                <option value="강원특별자치도">강원특별자치도</option>
+                <option value="l11">충청북도</option>
+                <option value="l12">충청남도</option>
+                <option value="l13">경상북도</option>
+                <option value="l14">경상남도</option>
+                <option value="l15">전북특별자치도</option>
+                <option value="l16">전라남도</option>
+                <option value="l17">제주도</option>
+            </select>
+
+            <!-- 종류별 카테고리 생성 -->
+
+            <select id="category">
+                <option value="category" selected>카테고리</option>
+                <option value="culture">문화예술</option>
+                <option value="group_work">모임</option>
+                <option value="contest">대회</option>
+            </select>
+
+            <!-- 버튼 생성 -->
+
+            <button class="sortEvent" onclick="filterEvents()">찾기</button>
+
+        </div>
+
+        <table id="myTable">
+            <thead>
+            </thead>
+            <!-- js에서 content가 추가될 부분 -->
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </section>
 </body>
+<script>
+    // 네비바 js
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const sear1 = document.querySelector(".sear");
+
+
+    // 반응형 배너
+    menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  sear1.classList.toggle("active");
+  console.log("Menu links:", navLinks.classList);
+  console.log("Search bar:", sear1.classList);
+});
+
+</script>
+
 </html>
