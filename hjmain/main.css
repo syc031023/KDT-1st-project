@@ -3,14 +3,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
-body {
-  /* font-family: Arial, sans-serif; */
-  margin-left: 15%;
+/* body { */
+/* font-family: Arial, sans-serif; */
+/* margin-left: 15%;
   margin-right: 15%;
-}
+} */
 
 .navbar {
   display: flex;
@@ -76,9 +76,9 @@ body {
     position: absolute;
     top: 70px;
     left: 0;
-    width: 70%;
+    width: 100%;
     background-color: #333;
-    margin-left: 15%;
+    /* margin-left: 15%; */
   }
 
   .nav-links.active {
@@ -98,9 +98,9 @@ body {
     position: absolute;
     top: 113px;
     left: 0px;
-    width: 70%;
+    width: 100%;
     background-color: #333;
-    margin-left: 15%;
+    /* margin-left: 15%; */
   }
   .sear.active {
     display: flex;
@@ -142,6 +142,7 @@ body {
   font-weight: bold;
   text-align: center;
   background-color: #333;
+  width: 100%;
 }
 
 .carousel-button {
@@ -180,6 +181,14 @@ body {
 }
 
 .card-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card-container2 {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -235,17 +244,17 @@ body {
   /* border-radius: 50%; */
 }
 
-.prev {
+/* .prev {
   left: 10px;
-}
+} */
 
-.next {
+/* .next {
   right: 10px;
-}
+} */
 
 .btd {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .cbt {

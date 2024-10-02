@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 내비게이션 바</title>
     <!-- 네비바 css -->
-    <link rel="stylesheet" href="/hjmain.html/mp.css">
+    <link rel="stylesheet" href="./최종메인.css">
 </head>
 
 <body>
@@ -59,8 +59,7 @@
 
     <div class="bocls">
         <div class="btd">
-            <button class="cbt">지역별</button>
-            <button class="cbt">진행중인 축제</button>
+            <h1>지역별</h1>
         </div>
         <div style="position: relative;">
 
@@ -94,7 +93,50 @@
                 </div>
             </div>
 
-            <button class="scroll-button next" onclick="scrollRight()">&#10095;</button>
+            <button class="scroll-button next" onclick="scrollRight1()">&#10095;</button>
+
+        </div>
+    </div>
+
+
+    <!-- 카드2 -->
+    <div class="bocls">
+        <div class="btd">
+            <h1>진행중인 축제</h1>
+        </div>
+        <div style="position: relative;">
+
+            <button class="scroll-button prev" onclick="scrollLeft2()">&#10094;</button>
+
+            <div class="card-container2" id="cardContainer2">
+                <div class="card">
+                    <img src="/사진/01.jpg" alt="Card 1">
+                    <h3>카드 제목 1</h3>
+                    <p>이것은 카드 1에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/02.jpg" alt="Card 2">
+                    <h3>카드 제목 2</h3>
+                    <p>이것은 카드 2에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/trval03.jfif" alt="Card 3">
+                    <h3>카드 제목 3</h3>
+                    <p>이것은 카드 3에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/01.jpg" alt="Card 4">
+                    <h3>카드 제목 4</h3>
+                    <p>이것은 카드 4에 대한 설명입니다.</p>
+                </div>
+                <div class="card">
+                    <img src="/사진/02.jpg" alt="Card 5">
+                    <h3>카드 제목 5</h3>
+                    <p>이것은 카드 5에 대한 설명입니다.</p>
+                </div>
+            </div>
+
+            <button class="scroll-button next" onclick="scrollRight2()">&#10095;</button>
 
         </div>
     </div>
@@ -118,11 +160,8 @@
 
 
 
-
-
-
     <!-- 네비바 코드 -->
-    <script src="/hjmain.html/mp.js"></script>
+    <script src="./최종메인.js"></script>
 </body>
 
 </html>

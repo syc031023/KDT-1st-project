@@ -4,6 +4,8 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const sear1 = document.querySelector(".sear");
 
+console.log(menuToggle);
+
 // 반응형 배너
 const ccner = document.querySelector(".carousel-container");
 
@@ -61,7 +63,7 @@ for (let i = 0; i < button.length; i++) {
 const container = document.getElementById("cardContainer");
 console.log(container);
 
-function scrollRight() {
+function scrollRight1() {
   container.scrollBy({ left: container.clientWidth, behavior: "smooth" });
   console.log(container);
 }
@@ -83,3 +85,31 @@ function row_scroll() {
 }
 
 row_scroll();
+
+// 카드2 js코드
+
+const container2 = document.getElementById("cardContainer2");
+console.log(container2);
+
+function scrollRight2() {
+  container2.scrollBy({ left: container2.clientWidth, behavior: "smooth" });
+  console.log(container2);
+}
+function scrollLeft2() {
+  container2.scrollBy({ left: -container2.clientWidth, behavior: "smooth" });
+  console.log(container2);
+}
+
+// 가로 스크롤
+
+function row_scroll2() {
+  document.querySelector(".card-container2").addEventListener("wheel", (e) => {
+    e.preventDefault();
+
+    var scrollAmount = e.deltaY * 5;
+
+    e.currentTarget.scrollLeft += scrollAmount;
+  });
+}
+
+row_scroll2();
