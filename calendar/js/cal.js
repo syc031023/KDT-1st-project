@@ -597,7 +597,7 @@ function Datehendel() {
         listWrap.append(
           `
           <div class = "list-wr-box">
-              <a href = "/detailPage/html/detail.html?id=${festval['id']}" target="_blank">
+              <a href = "/Users/song-youngchae/Documents/GitHub/KDT-1st-project/detailPage/html/detail.html?id=${festval['id']}" target="_blank">
                 <div class="wr-img" style="background-image: url('${festval.img_url}');"></div>
               </a>
               <div class="wr-title">${festval['name']}</div>
