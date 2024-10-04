@@ -1,4 +1,6 @@
-// 네비바 js
+window.onload = function() {
+
+  // 네비바 js
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -113,3 +115,7 @@ function row_scroll2() {
 }
 
 row_scroll2();
+
+
+};
+
