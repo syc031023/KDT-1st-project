@@ -327,7 +327,11 @@
         "more_info": "https://eworld.kr/",
         "describe": "10월 7-8일 이월드에서 열리는 뮤직 페스티벌은 EDM을 중심으로 모든 세대가 즐길 수 있는 다양한 프로그램으로 구성되어 있으며, 친구, 연인, 가족이 함께 참여할 수 있다. 축제에는 한정 포토존, 인증샷 경품 이벤트와 함께 가을 감성을 느낄 수 있는 <페스티브 마켓>, <펌킨 페스타>, <코스모스 가든>, <애니멀 유토피아> 등 다양한 콘텐츠가 마련된다. 이월드 뮤직 페스티벌은 신나는 음악과 함께 즐길 수 있는 특별한 경험을 제공한다.",
         "detail": "가을 감성 뮤직 페스티벌, 어텀 판타지 뮤직 파티",
-        "images": "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11f440bd-3be0-454f-a6cf-63a09c01fde3_1.png",
+        "images": [
+            "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/300_11f440bd-3be0-454f-a6cf-63a09c01fde3_1.png",
+            "https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/11f440bd-3be0-454f-a6cf-63a09c01fde3_2.png"    
+        ],
+        "youtube": "https://youtu.be/Zv5OJx7AAtg?si=ETojQvKyFUwuWbg_",
         "category": "culture",
         "location": "대구 달서구"
     },
