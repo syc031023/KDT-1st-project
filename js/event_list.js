@@ -1175,11 +1175,12 @@ function displayFestivals(festivals) {
     let rows = '';
     // 필터링된 축제 데이터를 테이블에 3개씩 나열
     festivals.forEach((event, index) => {
+        console.log(event.images);
         if (index % 3 === 0) rows += '<tr>';
         rows += `
             <td class="content">
-                <a href="../html/detail.html?id=${event['id']}" target="_blank">
-                    <img src="${event.img_url}" alt="${event.name}">
+                <a href="../html/detail.html?id=${event.id}" target="_blank">
+                    <img src="${event.images[0]}" alt="${event.name}">
                 </a>
                 <div class="info">
                     <h3>${event.name}</h3>
@@ -1188,7 +1189,7 @@ function displayFestivals(festivals) {
                 </div>
             </td>
         `;
-        if ((index + 1) % 3 === 0) rows += '</tr>'; // 한 행 끝날 때 닫음
+        if ((index + 1) % 3 === 0) rows += '</tr>';
     });
 
     // 마지막 행이 3개로 채워지지 않았다면 빈 td 추가
