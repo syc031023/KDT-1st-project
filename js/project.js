@@ -30,15 +30,3 @@ function updateTimer() {
     s +
     "<span>Seconds</span></div>";
 }
-.slide{
-	animation: slider 7.5s infinite linear;
-}
-.slide:nth-child(1) {
-  animation-delay: 0;
-}
-.slide:nth-child(2) {
-  animation-delay: -2.5s;
-}
-.slide:nth-child(3) {
-  animation-delay: -5s;
-}
