@@ -308,12 +308,11 @@ a {
 #container .box1 {
   margin-left: 120px;
   margin-right: 70px;
-  width: 450px;
+  width: 510px;
   height: 630px;
   margin-bottom: 100px;
   border-radius: 20px;
-  background-image: url("https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/fac40458-d12f-4963-8036-38d07a5155f7_3.jpg");
-  background-size: contain;
+  background-size: cover;
 }
 #container.box2 {
   /* width: 400px; */
@@ -507,6 +506,10 @@ hr {
 .swiper > img {
   width: 60%;
   height: 600px;
+}
+.swi1,.swi2,.swi3,.swi4 {
+  background-size: cover;
+
 }
 .detail {
   font-size: 30px;
