@@ -120,7 +120,7 @@
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .carousel-slide {
@@ -130,22 +130,29 @@
   height: 700px;
 }
 
-.carousel-slide img {
-  width: 100%;
+.mainimg {
+  width: 40%;
   height: 100%;
 }
+/* 
+.cars-d {
+  background-image: url(../files/img/main/seoul1.png);
+  opacity: 0.4;
+} */
 
-.carousel-slide a {
-  flex: 1;
+.cars-a {
+  /* flex: 1; */
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  background-color: #333;
-  width: 100%;
+  /* align-items: center; */
+  /* font-size: 2rem; */
+  /* color: white; */
+  /* font-weight: bold; */
+  /* text-align: center; */
+  background-color: #3333339b;
+  /* opacity: 1; */
+
+  width: 40%;
 }
 
 .carousel-button {
