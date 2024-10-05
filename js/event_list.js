@@ -1175,7 +1175,6 @@ function displayFestivals(festivals) {
     let rows = '';
     // 필터링된 축제 데이터를 테이블에 3개씩 나열
     festivals.forEach((event, index) => {
-        console.log(event.images);
         if (index % 3 === 0) rows += '<tr>';
         rows += `
             <td class="content">
