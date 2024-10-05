@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 /* body { */
@@ -22,7 +22,7 @@
 
 .navbar .logo {
   color: white;
-  font-size: 24px;
+  font-size: 370%;
 }
 
 .nav-links {
@@ -37,6 +37,7 @@
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 180%;
 }
 
 .menu-toggle {
@@ -54,20 +55,20 @@
 
 .sear {
   display: flex;
+  width: 25%;
 }
 .searin {
-  width: 200px;
-  height: 30px;
+  width: 80%;
+  height: 45px;
   position: relative;
   left: 10px;
 }
 
 .searbt {
-  width: 50px;
-  height: 30px;
+  width: 20%;
+  height: 45px;
   margin-left: 13px;
 }
-
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
@@ -125,15 +126,16 @@
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%;
+  width: 600%;
+  height: 700px;
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 
-.carousel-slide div {
+.carousel-slide a {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -190,16 +192,11 @@
 }
 
 .card-container2 {
-  display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 20px;
   padding: 20px 0;
 }
-
-/* .card-container::-webkit-scrollbar {
-  display: none;
-} */
 
 .card {
   flex: 0 0 30%;
@@ -242,6 +239,7 @@
   padding: 10px;
   cursor: pointer;
   font-size: 40px;
+  z-index: 1;
   /* border-radius: 50%; */
 }
 
@@ -255,7 +253,12 @@
 
 .btd {
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.btd1 {
+  display: flex;
+  align-items: center;
 }
 
 .cbt {
@@ -268,5 +271,99 @@
   .card {
     flex: 0 0 80%;
     /* 작은 화면에서는 카드 1개씩 보이도록 설정 */
+  }
+}
+
+/* 컨테이너 스타일 */
+.event-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 카드 스타일 */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 6%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.card .duration,
+.card .location,
+.card .status {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.card .status {
+  color: green;
+  font-weight: bold;
+}
+
+/* 메시지 스타일 */
+#message {
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 0;
+  color: red;
+}
+
+/* 타이틀 스타일 */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* 반응형 디자인 */
+/* @media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+} */
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .card .info {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card .duration,
+  .card .location,
+  .card .status {
+    font-size: 12px;
   }
 }

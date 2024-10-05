@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 필터링</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <style>
+        .card-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .card-container::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+        }
+
+        .card-container::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 300px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        #message {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2rem;
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btd">
+        <h1>지역별 축제</h1>
+        <div style="display: flex; align-items: center;">
+            <h3>현재위치 :</h3>
+            <select name="지역" id="location" onchange="filterEvents()">
+                <option value="location" selected>전체 지역</option>
+                <option value="서울">서울</option>
+                <option value="부산">부산</option>
+                <option value="대전">대전</option>
+                <option value="대구">대구</option>
+                <option value="광주">광주</option>
+                <option value="제주도">제주도</option>
+                <!-- 기타 지역 추가 -->
+            </select>
+        </div>
+    </div>
+
+    <div class="card-container" id="cardContainer"></div>
+    <div id="message"></div>
+
+    <script>
+        let festdata = []; // 축제 데이터를 저장할 배열
+
+        // JSON 데이터 가져오기
+        async function fetchData() {
+            try {
+                const response = await fetch('../files/data.json'); // JSON 데이터 가져오기
+                if (!response.ok) {
+                    throw new Error(`Network response not ${response.status}`);
+                }
+                festdata = await response.json(); // 데이터를 JSON으로 변환하여 festdata에 저장
+                console.log(festdata); // 데이터를 가져왔는지 콘솔에 출력
+            } catch (error) {
+                console.log('There has been a problem with your fetch: ', error);
+            }
+        }
+
+        // 필터링된 이벤트를 표시하는 함수 (location으로만 필터링)
+        function filterEvents() {
+            let selectedLocation = $("#location").val(); // 선택한 지역
+
+            // 축제 데이터를 필터링하여 조건에 맞는 축제만 반환
+            let filteredFestivals = festdata.filter(event => {
+                return selectedLocation === "location" || event.location.split(' ')[0] === selectedLocation;
+            });
+
+            console.log('Filtered Festivals:', filteredFestivals); // 필터된 데이터를 콘솔에 출력
+
+            // 필터링된 축제 데이터를 화면에 표시
+            displayFestivals(filteredFestivals);
+        }
+
+        // 필터링된 축제 데이터를 표시하는 함수
+        function displayFestivals(festivals) {
+            let cardContainer = $("#cardContainer"); // 데이터를 표시할 카드 컨테이너 요소
+            let message = $("#message");
+            cardContainer.empty(); // 기존 내용을 초기화
+            message.text(''); // 메시지 초기화
+
+            // 필터링된 결과가 없을 경우 메시지 출력
+            if (festivals.length === 0) {
+                message.text('조건에 맞는 결과가 없습니다.');
+                return;
+            }
+
+            // 필터링된 축제 데이터를 카드로 표시
+            festivals.forEach(event => {
+                let card = `
+            <div class="card">
+                <a href="../html/detail.html?id=${event['id']}" target="_blank">
+                    <img src="${event.img_url}" alt="${event.name}">
+                </a>
+                <div class="info">
+                    <h3>${event.name}</h3>
+                    <p class="duration">${event.startDate} ~ ${event.endDate}</p>
+                    <p class="location">${event.location}</p>
+                </div>
+            </div>
+        `;
+                cardContainer.append(card);
+            });
+        }
+
+        // 페이지 로드 시 모든 축제 데이터를 초기화면에 표시
+        $(document).ready(async function () {
+            await fetchData(); // JSON 데이터를 불러온 후
+            displayFestivals(festdata); // 초기 화면에 모든 축제 표시
+        });
+
+    </script>
+
+</body>
+
+</html>
