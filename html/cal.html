@@ -9,8 +9,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 달력 css -->
   <link rel="stylesheet" href="../css/cal.css">
-  <script src="../js/cal.js"></script>
+  <!-- nav bar css -->
+   <link rel="stylesheet" href="../css/main.css">
+    <!-- 달력기능 js -->
+  <!-- <script src="../js/cal.js"></script> -->
+   <!-- 달력수정할거 있음 테스트 파일 -->
+   <script src="../js/cal.js"></script>
   <title>축제 달력</title>
 </head>
 <body>  
@@ -23,12 +29,35 @@
 기능 : 인기순,축제일 순,거리순(조사해서)
 기능 :  -->
   <!-- 로고 및 네비게이션 -->
-   <header>
-    <div id = "logo">
-
+  <!-- 네비바 -->
+  <header>
+    <div class="header-logo-wrap">
+      <nav class="navbar">
+        <div class="logo"><a href="../html/main.html">로고</a></div>
+        <!-- 메뉴 -->
+        <ul class="nav-links">
+            <li><a href="../html/event_list.html">전국 이벤트</a></li>
+            <li><a href="../html/cal.html">달력</a></li>
+        </ul>
+        <!-- 서치바 -->
+        <form class="sear" role="search">
+            <input class="searin" type="search" placeholder="Search" aria-label="Search" />
+            <button class="searbt" type="submit">
+                검색
+            </button>
+        </form>
+        <!-- 버튼 -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+    </nav>
+  
+      </div>
 
     </div>
   </header>
+
   
   <main id = main>
     <div id = wrap>
@@ -39,11 +68,11 @@
            <div class = "month-info-rab">
             <span class = "date-span"></span>
             <div class = "dir-rab">
-              <div class = "dir-cic">
-                <span class = "dir prev" onclick=""><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+              <div class = "dir-cic dir prev">
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
               </div>
-              <div class = "dir-cic">
-                <span class = "dir next"><i class="fa-solid fa-arrow-right"></i></span>   
+              <div class = "dir-cic dir next">
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
        </div>
@@ -76,8 +105,6 @@
             <tbody>
                  <!-- js로 데이터 출력됨 -->
             </tbody>
-
-           
           </table>
        </div>
        <!-- 날짜 미 클릭시 나올 사용자에게 보여줄 화면 -->
@@ -85,7 +112,7 @@
         <div id = "no-wrap">
           <div class = "inner">
             <div>
-              <img src="./img/calenderSelect.png" alt="">
+              <img src="../files/img/calenderSelect.png" alt="">
             </div>
             <p>달력에서 날짜를 선택해주세요</p>
             <span>
