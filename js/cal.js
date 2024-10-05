@@ -251,7 +251,7 @@ $(document).ready(function(){
               listWrap.append(
                 `
                 <div class = "list-wr-box">
-                    <a href = "../html/detail.html?id=${festval['id']}" target="_blank">
+                    <a href = "../html/project.html?id=${festval['id']}" target="_blank">
                       <div class="wr-img" style="background-image: url('${festval["images"][0]}');"></div>
                     </a>
                     <div class="wr-title">${festval['name']}</div>

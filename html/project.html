@@ -33,13 +33,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../js/project.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <!-- js -->
+    <script src="/js/send_project.js"></script>
   </head>
 
   <body style="overflow-x: hidden">
@@ -67,10 +71,7 @@
       <div class="overlay">
         <div class="first_content">
           <div class="smalltext">
-            <h3>
-              여의도 한강공원 및 한강변 일대에서 열리는 한화그룹의 사회 공헌
-              행사
-            </h3>
+            <h3 class="name"></h3>
           </div>
         </div>
         <div class="textName">
@@ -85,7 +86,7 @@
         <!--  행사 날짜 표시 -->
         <div class="big">
           <div class="small">
-            <span><h3>2024.10.05 SAT</h3></span>
+            <span><h3 class="startDate"></h3></span>
           </div>
         </div>
         <!-- 디데이 날짜 자동으로 계산해주는 시스템 -->
@@ -120,7 +121,7 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <!-- <div class="swiper-slide">
+            <div class="swiper-slide">
               <img src="../files/img/detail/불꽃축제1.jpg" />
             </div>
             <div class="swiper-slide">
@@ -132,12 +133,6 @@
             <div class="swiper-slide">
               <img src="../files/img/detail/붗꽃축제4.jpg" />
             </div>
-          </div> -->
-          <div class="slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
           </div>
           <!-- If we need navigation buttons -->
           <div class="swiper-button-next" style="color: white"></div>
@@ -154,14 +149,7 @@
           <span class="share-count">0</span>
         </div>
 
-        <div class="content_1">
-          서울세계불꽃축제는 바쁜 매일을 살아가는 시민의 일상에 즐거움을
-          선사하기 위해 한화그룹에서 2000년부터 사회공헌 사업으로 꾸준히 진행해
-          온 축제이다. 매년 세계적인 수준의 불꽃 전문 기업들이 초청되어 여의도의
-          밤 하늘을 무대로 환상적인 불꽃 연출을 선보이며, 주간에도 다채로운
-          부대행사가 진행된다. (주)한화가 자랑하는 '멀티미디어 불꽃쇼'는 불꽃과
-          음악, 레이저 연출이 결합된 아시아 최고 수준의 불꽃쇼이다.
-        </div>
+        <div class="content_1"></div>
         <div class="plusText">
           [행사내용]
           <br />
@@ -192,7 +180,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text0">2024.10.05</h5>
+              <h5 class="text0 startDate"></h5>
             </div>
             <div class="info">
               <div class="circle circle2">
@@ -210,7 +198,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text0">서울특별시 영등포구 여의동로 330 (여의도동)</h5>
+              <h5 class="text0 address"></h5>
             </div>
             <div class="info">
               <div class="circle circle3">
@@ -234,7 +222,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1">무료 (일부 관람석 유료화)</h5>
+              <h5 class="text1 cost">무료 (일부 관람석 유료화)</h5>
             </div>
             <div class="info">
               <div class="circle circle4">
@@ -252,7 +240,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1">hawhadays</h5>
+              <h5 class="text1 instagram"></h5>
             </div>
             <div class="info">
               <div class="circle circle5">
@@ -271,14 +259,10 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1">02-519-9778</h5>
+              <h5 class="text1 contact"></h5>
             </div>
-            <div>
-              <a
-                href="https://www.hanwhafireworks.com/kor/main.html"
-                class="home"
-                ><button class="homepage">공식 홈페이지</button>
-              </a>
+            <div class="homePageMove">
+              <!-- 공식 홈페이지 이동버튼 jqeury 생성 -->
             </div>
           </div>
         </div>
@@ -307,7 +291,7 @@
           id="youtube_size"
           width="1140"
           height="650"
-          src="https://www.youtube.com/embed/gTh55p0_lb4?si=BDlYCsJlyvbFtGh0"
+          src=""
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

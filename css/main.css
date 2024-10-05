@@ -6,11 +6,20 @@
   box-sizing: border-box;
 }
 
+body{
+  min-width: 390px;
+}
+
 /* body { */
 /* font-family: Arial, sans-serif; */
 /* margin-left: 15%;
   margin-right: 15%;
 } */
+
+section{
+  position: relative;
+  top: 87px;
+}
 
 .navbar {
   display: flex;
@@ -18,11 +27,14 @@
   align-items: center;
   padding: 20px;
   background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .navbar .logo {
   color: white;
-  font-size: 370%;
+  font-size: 40px;
 }
 
 .nav-links {
@@ -37,7 +49,7 @@
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 180%;
+  font-size: 23px;
 }
 
 .menu-toggle {
@@ -134,7 +146,6 @@
 }
 
 .mainimg {
-  width: 40%;
   height: 100%;
 }
 /* 
@@ -178,10 +189,24 @@
   right: 10px;
 }
 
+@media (width > 390px){
+  .event-container{
+    width: 1000px;
+  }
+}
+
 /* 반응형 스타일 */
-@media (max-width: 768px) {
+@media (max-width: 390px) {
   .carousel-slide img {
-    height: 250px;
+    width: 100%;
+  }
+
+  .bocls button{
+    display: none;
+  }
+
+  .event-container{
+    width: 390px;
   }
 }
 
@@ -208,7 +233,7 @@
 .card {
   flex: 0 0 30%;
   /* 카드가 3개씩 보이도록 설정 */
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   padding: 20px;
   border-radius: 4%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -220,20 +245,20 @@
 }
 
 .card img {
-  width: 100%;
-  height: 70%;
-  border-radius: 4%;
-  margin-bottom: 15px;
+  width: 230px;
+  height: 200px;
+  border-radius: 5%;
 }
 
-.card h3 {
+/* .card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-}
+} */
 
-.card p {
-  font-size: 1rem;
-  color: #666;
+.card p, h3 {
+  /* font-size: 1rem;
+  color: #666; */
+  margin: 0;
 }
 
 .scroll-button {
@@ -274,12 +299,13 @@
   font-size: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .card {
     flex: 0 0 80%;
     /* 작은 화면에서는 카드 1개씩 보이도록 설정 */
   }
 }
+
 
 /* 컨테이너 스타일 */
 .event-container {
@@ -290,12 +316,17 @@
 
 /* 카드 스타일 */
 .card {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd;
   border-radius: 6%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s;
-  background-color: #fff;
+  background-color: #fff; */
+
+  overflow: hidden;
+  width: 250px;
+  height: 340px;
+  margin: 0;
 }
 
 .card:hover {
@@ -309,7 +340,6 @@
 }
 
 .card .info {
-  padding: 15px;
   text-align: center;
 }
 

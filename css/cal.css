@@ -36,7 +36,6 @@ body,html {
   width: 100%;
   height: 1000px;
   background-color: #fff;
-  background-image: url('../files/img/main/calendar_background.jpg');
 }
 /* 월별 축제 텍스트 영역 */
 .month-info {
