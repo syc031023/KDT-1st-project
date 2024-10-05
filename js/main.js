@@ -225,7 +225,7 @@ function displayFestivals(festivals) {
       let card = `
               <div class="card">
                   <a href="../html/detail.html?id=${event["id"]}" target="_blank">
-                      <img src="${event.img_url}" alt="${event.name}">
+                      <img src="${event.images[0]}" alt="${event.name}">
                   </a>
                   <div class="info">
                       <h3>${event.name}</h3>
@@ -250,7 +250,7 @@ function displayFestivals(festivals) {
       let card = `
               <div class="card">
                   <a href="../html/detail.html?id=${event["id"]}" target="_blank">
-                      <img src="${event.img_url}" alt="${event.name}">
+                      <img src="${event.images[0]}" alt="${event.name}">
                   </a>
                   <div class="info">
                       <h3>${event.name}</h3>
