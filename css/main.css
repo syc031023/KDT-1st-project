@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body{
+  min-width: 390px;
+}
+
 /* body { */
 /* font-family: Arial, sans-serif; */
 /* margin-left: 15%;
@@ -185,7 +189,7 @@ section{
   right: 10px;
 }
 
-@media (min-width: 390px){
+@media (width > 390px){
   .event-container{
     width: 1000px;
   }
@@ -295,7 +299,7 @@ section{
   font-size: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .card {
     flex: 0 0 80%;
     /* 작은 화면에서는 카드 1개씩 보이도록 설정 */
@@ -308,7 +312,6 @@ section{
   display: flex;
   gap: 20px;
   padding: 20px;
-  width: 1000px;
 }
 
 /* 카드 스타일 */
