@@ -1,0 +1,292 @@
+*{ 
+  margin : 0;
+  padding : 0;
+}
+
+ul,li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  width: 50px;
+  height: 50px;
+}
+/* 헤더영역 */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.container {
+  width: 100%;
+  height: 150px;
+  background-color: aquamarine;
+}
+/* 헤더영역 end */
+
+/* <!-- 메인 화면 / 시계 및 배경 이미지 영역 --> */
+#main-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 800px;
+  background-color: bisque;
+  background-size: cover;
+}
+
+.time-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 300px;
+}
+
+.wrap-title {
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  position: absolute;
+  top : 0;
+  margin : 40px;
+  color : #fff;
+  word-break: break-all;
+}
+
+.ti-m {
+  text-align: center;
+  line-height: 90px;
+  width: 20%;
+  height: 90px;
+  border : 3px solid #fff;
+  border-radius: 20px;
+  color : #fff;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.event-day {
+  position: absolute;
+  text-align: center;
+  border : 3px dotted #e49760;
+  border-radius: 30px;
+  bottom: 50px;
+  width: 150px;
+  height: 50px;
+}
+
+.ti-ch {
+  color: #ee6909;
+  font-size: 3rem;
+  border: none;
+}
+
+.ti {
+  font-size: 3rem;
+  border: none;
+}
+.time-wrap p{
+  position: relative;
+  bottom: 10px;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.event-day .eve {
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  border : 3px dotted #e49760;
+  border-radius: 20px;
+  bottom: 2px;
+  line-height: 40px;
+  left : 7px;
+  width: 90%;
+  height: 40px;
+  color : #fff;
+}
+/* <!-- 메인 화면 / 시계 및 배경 이미지 영역 --> */
+
+/* <!-- 축제 진행중 및 포스터 이미지 기간 영역 --> */
+#section {
+  width: 100%;
+  height: auto;
+}
+.section-wrap {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.section-wrap .set-title {
+  width: 100%;
+  height: auto;
+  padding : 30px 0 20px 0;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.section-wrap .set-logo {
+  width: 100%;
+  height: auto;
+  line-height: 20px;
+  padding : 10px 0 20px 0;
+  font-size: 1.5rem;
+}
+.festivi-button {
+  width: 20%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 14px;
+  height: 50px;
+  background-color: rgb(241, 26, 152);
+  color : #fff;
+  font-weight: 900;
+}
+/* 행사 시작 날짜 표시 시계 밑에 */
+.set-period {
+  width: 100%;
+  height: 50px;
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 50px;
+  padding : 10px 0 10px 0;
+}
+.title-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 900px;
+  background-size: cover;
+}
+/* <!-- 축제 진행중 및 포스터 이미지 기간 영역 --> */
+.section-wrap .set-share {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.7rem;
+}
+.section-wrap .share-btn {
+  padding-left: 20px;
+}
+
+.set-content-wrap {
+  width: 100%;
+  /* 40vh 높이가 적당
+    더보기 클안했을때 고정값 높이
+  */
+  height: 30vh;
+}
+/* 축제정보에 대한 디테일한 내용 */
+.section-wrap .set-content {
+  margin-top: 10px;
+  width: 100%;
+  height: 130px;
+  font-weight: 900;
+  font-size: 1.0rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* 표시할 줄 수 설정 (여기서는 3줄) */
+  -webkit-box-orient: vertical;
+  white-space: normal; /* 여러 줄을 허용 */
+}
+.set-content-wrap .the-moer {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: auto;
+}
+.set-content-wrap .the-moer .the-moer-btn {
+  margin-top: 6px;
+  border-radius: 20px;
+  text-align: center;
+  width: 13%;
+  font-size: 1.2rem;
+  background-color: #640D5F;
+  color : #fff;
+  font-weight: 900;
+}
+
+.set-content-wrap .the-moer .the-moer-btn:hover {
+  background-color: #D91656;
+}
+
+
+#fest-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 0.8rem;
+}
+
+#fest-wrap .fest-box {
+  display: flex;
+  width: 80%;
+  height: 400px;
+}
+
+#fest-wrap .fest-box > div {
+  width: 100%;
+  height: 400px;
+  margin-left : 30px;
+}
+#fest-wrap .fest-box .fest-title-img {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.fest-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fest-content .ft {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+.fest-content .ft .ft-data {
+  width: 80%;
+  height: auto;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.ft > .ft-icon {
+  display: inline-block;
+  font-size: 42px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(237, 237, 234);
+  text-align: center;
+}
+.ft-homePage-btn {
+  margin-left: 80px;
+  text-align: center;
+  width: 50%;
+  border : 3px solid #7b7a7a;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.ft-homePage-btn a{
+  color : #000;
+}
+.ft-homePage-btn:hover{
+  background-color: #D91656;
+}
+.ft-homePage-btn a:hover {
+  color : #fff;
+}

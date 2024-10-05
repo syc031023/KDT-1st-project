@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 내비게이션 바</title>
+    <!-- 네비바 css -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <!-- 네비바 -->
+
+
+    <nav class="navbar">
+        <!-- <div class="logo">로고 -->
+        <a style="text-decoration: none;" class="logo" href="../html/main.html">로고</a>
+        <!-- </div> -->
+
+        <a href="../html/event_list.html"></a>
+
+        <!-- 메뉴 -->
+        <ul class="nav-links">
+            <li><a href="../html/event_list.html">전국 이벤트</a></li>
+            <li><a href="../html/cal.html">달력</a></li>
+        </ul>
+        <!-- 서치바 -->
+        <form class="sear" role="search" onsubmit="event.preventDefault(); searchFun();">
+            <input class="searin" type="search" placeholder="검색" aria-label="Search" id="searin" />
+            <button class="searbt" type="submit" onclick="location.href='../html/event_list.html';">
+                검색
+            </button>
+        </form>
+
+        <!-- 버튼 -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+
+
+    <!-- 중간 베너 -->
+
+
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <a href="../html/event_list.html"><img a href="" src="../files/middlebenner/seoul1.png" alt="Slide 1"></a>
+            <a href="../html/event_list.html"><img src="../files/middlebenner/seoul2.jpg" alt="Slide 2"></a>
+            <a href="../html/event_list.html"><img src="../files/middlebenner/seoul3.jpg" alt="Slide 3"></a>
+            <a href="../html/event_list.html"><img src="../files/middlebenner/incheon3.png" alt="Slide 4"></a>
+            <a href="../html/event_list.html"><img src="../files/middlebenner/gwanju2.jpg" alt="Slide 5"></a>
+            <a href="../html/event_list.html"><img src="../files/middlebenner/daejeon7.jpg" alt="Slide 6"></a>
+
+        </div>
+
+        <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+
+
+
+    <!-- 카드 -->
+
+    <div class="bocls">
+        <div class="btd">
+            <h1>지역별</h1>
+
+            <div class="selection" style="display: flex; align-items: center;">
+                <h3>현재위치 :</h2>
+                    <select name="지역" id="location" onclick="filterEvents()">
+                        <option value="서울" selected>서울</option>
+                        <option value="인천">인천</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="부산">부산</option>
+                        <option value="울산">울산</option>
+                        <option value="세종시">세종시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원특별자치도">강원도</option>
+                        <option value="충청북도">충청북도</option>
+                        <option value="충청남도">충청남도</option>
+                        <option value="경상북도">경상북도</option>
+                        <option value="경상남도">경상남도</option>
+                        <option value="전북특별자치도">전라북도</option>
+                        <option value="전라남도">전라남도</option>
+                        <option value="제주도">제주도</option>
+                    </select>
+            </div>
+        </div>
+
+
+        <div style="position: relative;">
+
+            <button class="scroll-button prev" onclick="scrollLeft1()">&#10094;</button>
+
+            <div class="card-container" id="cardContainer">
+
+                <div id="message"></div>
+                <div id="locationContainer" class="event-container"></div>
+            </div>
+
+            <button class="scroll-button next" onclick="scrollRight1()">&#10095;</button>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- 카드2 -->
+    <div class="bocls">
+        <div class="btd1">
+            <h1>현재 진행중인 축제</h1>
+            <div style="display: flex;align-items: flex-end; margin-left: 5%;">
+                <h2>Date :
+                    <script>
+                        date = new Date().toLocaleDateString();
+                        document.write(date);
+                    </script>
+                </h2>
+            </div>
+        </div>
+
+
+
+        <div style="position: relative;">
+
+            <button class="scroll-button prev" onclick="scrollLeft2()">&#10094;</button>
+
+            <div class="card-container2" id="cardContainer2">
+                <div id="ongoingContainer" class="event-container"></div>
+            </div>
+
+            <button class="scroll-button next" onclick="scrollRight2()">&#10095;</button>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- 네비바 코드 -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
