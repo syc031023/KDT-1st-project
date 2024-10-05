@@ -236,9 +236,7 @@ function Datehendel() {
     const clickDate = $(this).find('.on').text();
     // 날짜가 1자리로 나오는걸 방지 -> ex) 1일 이면 01 
     const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(clickDate).padStart(2, '0')}`;
-    console.log(festDataDay(fullDate));
     let festivalData = festDataDay(fullDate);
-    console.log(festivalData);
 
     // 해당 날짜를 눌렀을때 리스트 출력하기
     const listWrap = $('.list-wrap');
@@ -249,15 +247,12 @@ function Datehendel() {
     }else {
       festivalData.forEach(festval => {
           // 'imges' 속성이 존재하고 배열인지 확인한 후 length 체크
-          if (festval["imges"] && Array.isArray(festval["imges"])) {
-            console.log("imges length: ", festval["imges"].length);  // 정상적으로 배열의 길이를 출력
-            console.log("이미지 0번째 값", festval["imges"][0]);
-
+          if (festval["images"] && Array.isArray(festval["images"])) {
             listWrap.append(
               `
               <div class = "list-wr-box">
                   <a href = "../html/detail.html?id=${festval['id']}" target="_blank">
-                    <div class="wr-img" style="background-image: url('${festval["imges"][0]}');"></div>
+                    <div class="wr-img" style="background-image: url('${festval["images"][0]}');"></div>
                   </a>
                   <div class="wr-title">${festval['name']}</div>
                   <div class="wr-date">${festval.startDate} - ${festval.endDate}</div>
@@ -276,7 +271,6 @@ function Datehendel() {
     }
 
     $('#no-wrap').hide();
-    swal("불러오기 완료!","스크롤 하여 축제 정보를 확인해 보세요!","success");
     $('#all-list-wrap').show();
   });
 }

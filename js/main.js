@@ -17,6 +17,7 @@ menuToggle.addEventListener("click", () => {
   ccner.classList.toggle("active");
 });
 
+
 // 중간배너 js코드
 
 let currentSlide = 0;

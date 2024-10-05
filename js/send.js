@@ -68,19 +68,19 @@ menuToggle.addEventListener("click", () => {
           contact : JsonData[i].contact,
           poster_url : JsonData[i].poster_url,
           img_url : JsonData[i].img_url,
-          imges : JsonData[i].imges
+          images : JsonData[i].images
         };
         
         for (const key in festivalData) {
           console.log("key값 :", key);
           console.log('festivalData[key]', festivalData[key]);
-          console.log('festivalData[key]', festivalData["imges"][0]);
+          console.log('festivalData[key]', festivalData["images"][0]);
           if(key === "startDate") {
             // 기간 표시
             const startDate = festivalData[key];
             const endDate = festivalData["endDate"];
             $('.period').append(startDate + '~' + endDate);
-          } else if(key === "imges") {
+          } else if(key === "images") {
             $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
             $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
             $('.box1').css('background-image', `url(${festivalData[key][3]})`);
