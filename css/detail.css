@@ -20,7 +20,6 @@ header {
   justify-content: space-between;
 }
 
-
 .container {
   width: 100%;
   height: 150px;
@@ -35,18 +34,24 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 800px;
+  height: 100vh;
   background-color: bisque;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .time-wrap {
+  margin : 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
   height: 300px;
+  background-color: rgba(78, 77, 77, 0.6); /* 반투명한 검은색 배경 */
+  padding: 10px; /* 배경이 텍스트에 잘 붙도록 패딩 추가 */
+  border-radius: 14px;
 }
 
 .wrap-title {
@@ -69,7 +74,7 @@ header {
   border-radius: 20px;
   color : #fff;
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .event-day {
@@ -83,7 +88,7 @@ header {
 }
 
 .ti-ch {
-  color: #ee6909;
+  color: #a1fe00;
   font-size: 3rem;
   border: none;
 }
@@ -160,10 +165,21 @@ header {
   padding : 10px 0 10px 0;
 }
 .title-img {
+  justify-content: start;
+  align-items: center;
+  display: flex;
   border-radius: 10px;
   width: 100%;
-  height: 900px;
-  background-size: cover;
+  height: 50vh;
+  box-sizing: border-box;
+  padding : 20px;
+}
+.title-img .box {
+  width: 380px;
+  height: 400px;
+  margin-left: 9px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 /* <!-- 축제 진행중 및 포스터 이미지 기간 영역 --> */
 .section-wrap .set-share {
@@ -174,6 +190,7 @@ header {
 }
 .section-wrap .share-btn {
   padding-left: 20px;
+  
 }
 
 .set-content-wrap {
@@ -193,7 +210,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 6; /* 표시할 줄 수 설정 (여기서는 3줄) */
+  -webkit-line-clamp: 6; /* 표시할 줄 수 설정 (여기서는 6줄) */
   -webkit-box-orient: vertical;
   white-space: normal; /* 여러 줄을 허용 */
 }
@@ -229,9 +246,10 @@ header {
 }
 
 #fest-wrap .fest-box {
+  position: relative;
   display: flex;
   width: 80%;
-  height: 400px;
+  height: 80vh;
 }
 
 #fest-wrap .fest-box > div {
@@ -241,8 +259,10 @@ header {
 }
 #fest-wrap .fest-box .fest-title-img {
   width: 100%;
-  background-size: contain;
+  height: auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .fest-content {
   display: flex;
@@ -272,15 +292,24 @@ header {
   background-color: rgb(237, 237, 234);
   text-align: center;
 }
+
+.ft-fi {
+  position: absolute;
+  right : 30px;
+  bottom: 30px;
+}
+
 .ft-homePage-btn {
-  margin-left: 80px;
   text-align: center;
-  width: 50%;
+  width: 40%;
   border : 3px solid #7b7a7a;
   border-radius: 15px;
   font-size: 1.7rem;
   font-weight: 800;
 }
+
+
+
 .ft-homePage-btn a{
   color : #000;
 }

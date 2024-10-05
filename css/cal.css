@@ -1,12 +1,22 @@
 *{
   margin : 0;
   padding : 0;
+  box-sizing: border-box;
 }
 
-#logo {
+body,html {
   width: 100%;
-  height: 150px;
+  height: 100%;
+}
+
+.header-logo-wrap {
+  width: 100%;
+  height: auto;
   background-color: rgb(4, 170, 170);
+}
+
+.menuBtn {
+  height: 210px;
 }
 
 #main {
@@ -26,26 +36,27 @@
   width: 100%;
   height: 1000px;
   background-color: #fff;
-  background-image: url('/calendar/img/02.jpg');
+  background-image: url('../files/img/calendar_background.jpg');
 }
 /* 월별 축제 텍스트 영역 */
 .month-info {
+  position: relative;
+  max-width: 1200px;
   width: 100%;
-  max-width: 1000px;
   height: 100px;
   margin: 0 auto;
   margin-top : 20px;
 }
 .month-info h3{
   font-size: 2.6rem;
-  
 }
 
 /* 화살표 아이콘 영역 */
 .month-info-rab {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
   height: 70px;
 }
 .month-info-rab .date-span, .dir {
@@ -55,30 +66,24 @@
 }
 .month-info-rab .dir-rab {
   position: absolute;
-  right : 0px;
-  display: inline-block;
-  width: 200px;
-  height: 70px;
+  right: 0;
+  display: flex;
+  gap : 10px;
 }
 .month-info-rab .dir-cic {
-  padding : 4.5px;
-  position: relative;
-  top: 6px;
-  left: 76px;
-  display: inline-block;
-  border: 3px solid #AD49E1;
-  border-radius: 50%;
   width: 50px;
-  height: 50px;
+  height: 50px;  
+  border: 3px solid #AD49E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .dir-cic .fa-arrow-left {
-  position: relative;
-  top : -14px;
   color : #AD49E1;
 }
 .dir-cic .fa-arrow-right {
-  position: relative;
-  top : -14px;
   color : #AD49E1;
 }
 .dir-cic:hover {
@@ -92,17 +97,20 @@
 /* 달력 영역 */
 .cal-info {
   width: 100%;
-  max-width: 1000px;
   height: 800px;
   margin-top : 40px;
+  margin : 0 auto;
+  box-sizing: border-box; /* padding과 border가 너비에 포함되도록 */
 }
 table {
   background-color: #fff;
   border: 1px solid #390b52;
+  width: 100%;
   
 }
 th {
   border-right: none;
+
 }
 td{
   border-bottom: 1px solid #cdcccc;
@@ -117,8 +125,6 @@ th {
   text-align: center;
   line-height: 50px;
   font-size: 1.5rem;
-  width: 24vh;
-  height: 50px;
 }
 
 /* day /축제 갯수/이미지 영역 */
@@ -162,7 +168,6 @@ th {
   border-radius: 5%;
   border : 3px solid #390b52;
 }
-
 .display {
   /* 축제리스트 클릭시 none 처리로 가려주기 */
   /* 페이지 열였을때 기본값 */
@@ -178,9 +183,6 @@ th {
   margin-top: 60px;
   display: block;
 }
-
-
-
 #no-wrap .inner {
   display: flex;
   flex-direction: column;
@@ -237,7 +239,7 @@ th {
 
 #all-list-wrap .list-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   margin : 0 auto;
   width: 100%;
@@ -285,200 +287,125 @@ th {
 }
 
 
-@media only screen and (max-width: 1697px) {
-  /* 모바일 사이즈 디자인 */  
+
+@media only screen and (max-width: 1350px) {
+  /* 모바일 사이즈 디자인 */ 
+  table {
+    width: 99%;
+  } 
+
+    /* 모바일 사이즈 디자인 */  
   #wrap {
-    background-color: #fff;
-    background-image: none;
+      background-color: #fff;
+      background-image: none;
   }
 }
-
-
-
 
 @media only screen and (max-width: 1080px) {
-  /* 모바일 사이즈 디자인 */  
-  #wrap {
-    width: 100%;
-    height: auto;
-  }
-  .month-info {
+  /* 모바일 사이즈 디자인 */ 
+  table {
+    width: 92%;
+  } 
+
+  .month-info-rab .dir-rab {
+    position: absolute;
+    right: 80px;
+}
+
+#all-list-wrap {
+  max-width: 900px;
+}
+
+}
+
+@media only screen and (max-width: 992px) {
+  /* 모바일 사이즈 디자인 */ 
+  table {
+    width: 92%;
+  } 
+
+  .month-info-rab .dir-rab {
+    position: absolute;
+    right: 80px;
+}
+
+#all-list-wrap {
+  max-width: 900px;
+}
+
+}
+
+@media only screen and (max-width: 850px) {
+  /* 모바일 사이즈 디자인 */ 
+  table {
     width: 90%;
-    max-width: 100%;
-  }
-  .month-info h3 {
-    font-size: 2rem;
-  }
+  } 
 
-  .cal-info {
-    width: 100%;
-  }
+  .month-info-rab .dir-rab {
+    position: absolute;
+    right: 80px;
+}
 
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 23vh;
-    height: 50px;
-  }
+#all-list-wrap {
+  max-width: 750px;
+}
+
+#all-list-wrap .list-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
 
 }
 
-/* 각 해상도 마다 달력사이즈 조절 */
-@media only screen and (max-width: 1560px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 20.5vh;
-    height: 50px;
-  }
+@media only screen and (max-width: 768px) {
+  /* 모바일 사이즈 디자인 */ 
+  table {
+    width: 90%;
+  } 
+
+  .month-info-rab .dir-rab {
+    position: absolute;
+    right: 80px;
+}
+
+#all-list-wrap {
+  max-width: 700px;
+}
+
+#all-list-wrap .list-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
 
 }
 
+@media only screen and (max-width: 680px) {
+  /* 모바일 사이즈 디자인 */ 
+  table {
+    width: 95%;
+  } 
 
-
-
-/* 각 해상도 마다 달력사이즈 조절 */
-@media only screen and (max-width: 1023px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 22vh;
-    height: 50px;
-  }
-
+  .month-info-rab .dir-rab {
+    position: absolute;
+    right: 50px;
 }
 
-@media only screen and (max-width: 989px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 21vh;
-    height: 50px;
-  }
-
+#all-list-wrap {
+  max-width: 600px;
 }
 
-@media only screen and (max-width: 920px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 20vh;
-    height: 50px;
-  }
-
+#all-list-wrap .list-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
 }
-
-
-@media only screen and (max-width: 886px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 19vh;
-    height: 50px;
-  }
-
-}
-
-@media only screen and (max-width: 840px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 18vh;
-    height: 50px;
-  }
-
-}
-
-@media only screen and (max-width: 795px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 17vh;
-    height: 50px;
-  }
-
-  #no-wrap p {
-    font-weight: 800;
-    font-size: 1.8rem;
-  }
-  #no-wrap span {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color : #7d7d7d;
-  }
-
-}
-
-@media only screen and (max-width: 748px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 16vh;
-    height: 50px;
-  }
-
-}
-
-@media only screen and (max-width: 682px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 13vh;
-    height: 50px;
-  }
-
-  #no-wrap p {
-    font-weight: 800;
-    font-size: 1.5rem;
-  }
-  #no-wrap span {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color : #7d7d7d;
-  }
-
-}
-
-@media only screen and (max-width: 591px) {
-  /* 모바일 사이즈 디자인 */  
-  .cal-info table th div {
-    text-align: center;
-    line-height: 50px;
-    font-size: 1.5rem;
-    width: 11.5vh;
-    height: 50px;
-  }
-
-  #no-wrap p {
-    font-weight: 800;
-    font-size: 1.3rem;
-  }
-  #no-wrap span {
-    font-weight: 600;
-    font-size: 1.0rem;
-    margin-top: 10px;
-    color : #7d7d7d;
-  }
 
 }

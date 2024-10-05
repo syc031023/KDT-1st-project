@@ -66,8 +66,6 @@ menuToggle.addEventListener("click", () => {
           category : JsonData[i].category,
           location : JsonData[i].location,
           contact : JsonData[i].contact,
-          poster_url : JsonData[i].poster_url,
-          img_url : JsonData[i].img_url,
           images : JsonData[i].images
         };
         
