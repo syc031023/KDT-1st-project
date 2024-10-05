@@ -1,3 +1,39 @@
+/* 기본 PC 화면 스타일 (1920px 이상) */
+@media only screen and (min-width: 1920px) {
+  body {
+    /* 여기에 PC 화면용 스타일을 작성하세요 */
+    background-color: transparent;
+  }
+}
+
+/* PC 화면 (768px ~ 1920px) */
+@media only screen and (min-width: 768px) and (max-width: 1919px) {
+  body {
+    /* 여기에 PC 화면용 스타일을 작성하세요 */
+    background-color: transparent;
+  }
+}
+
+/* 태블릿 화면 (390px ~ 768px) */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  body {
+    /* 여기에 태블릿 화면용 스타일을 작성하세요 */
+    background-color: transparent;
+  }
+}
+
+/* 모바일 화면 (최소 390px 이상) */
+@media only screen and (max-width: 389px) {
+  body {
+    /* 여기에 모바일 화면용 스타일을 작성하세요 */
+    background-color: transparent;
+  }
+}
+
+/* 모바일 화면 최소 너비 설정 */
+body {
+  min-width: 390px;
+}
 .logo {
   width: 100%;
   height: 30px;
@@ -71,7 +107,6 @@
 .first_content {
   position: relative;
   bottom: 80px;
-  /* left: 50px; */
 }
 .textName {
   text-align: center;
@@ -498,7 +533,7 @@ hr {
   margin-top: 300px;
   margin-bottom: 100px;
 }
-.swiper {
+/* .swiper {
   width: 1000px;
   height: 600px;
   margin-top: 50px;
@@ -507,13 +542,72 @@ hr {
 .swiper > img {
   width: 60%;
   height: 600px;
+} */
+.slider {
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  left: 250px;
+  width: 800px;
+  height: 600px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  animation: slider 7.5s infinite linear;
+}
+
+.slide:nth-child(1) {
+  background-image: url(../files/img/detail/불꽃축제1.jpg);
+  animation-delay: 0;
+}
+.slide:nth-child(2) {
+  background-image: url(../files/img/detail/불꽃축제2.jpg);
+  animation-delay: -2.5s;
+}
+.slide:nth-child(3) {
+  background-image: url(../files/img/detail/불꽃축제3.jpg);
+  animation-delay: -5s;
+}
+.slide:nth-child(4) {
+  background-image: url(../files/img/detail/붗꽃축제4.jpg);
+  animation-delay: -7.5s;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+
+  26% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  93% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 .detail {
   font-size: 30px;
   font-weight: bold;
   position: relative;
   margin-left: 160px;
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .interaction-wrapper {
   margin-top: 20px;
