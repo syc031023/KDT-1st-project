@@ -19,21 +19,33 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* height: 80vw;
+  overflow:visible; */
+  margin-bottom: 150px;
 }
 
-/* navbar */
+section{
+  position: relative;
+  top: 87px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #333;
+  position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
-.logo a {
+.navbar .logo {
+  font-size: 40px;
+}
+
+a {
   color: white;
-  font-size: 24px;
   text-decoration: none;
 }
 
@@ -49,6 +61,7 @@ section {
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 23px;
 }
 
 .menu-toggle {
@@ -67,40 +80,37 @@ section {
 .sear {
   display: flex;
 }
-
 .searin {
-  width: 200px;
-  height: 30px;
+  width: 250px;
+  height: 45px;
   position: relative;
   left: 10px;
 }
 
 .searbt {
   width: 50px;
-  height: 30px;
+  height: 45px;
   margin-left: 13px;
 }
 
-/* 반응형 디자인 */
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 68px;
+    top: 88px;
     left: 0;
     width: 100%;
     background-color: #333;
-    z-index: 1;
+    /* margin-left: 15%; */
+    z-index: 999;
   }
 
-  /* Fix the selector by adding a dot before active */
   .nav-links.active {
     display: flex;
     opacity: 0.8;
   }
-
   .nav-links.active li {
     position: relative;
     margin-top: 15px;
@@ -109,26 +119,24 @@ section {
   .menu-toggle {
     display: flex;
   }
-
   .sear {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 107px;
+    top: 173px;
     left: 0px;
     width: 100%;
     background-color: #333;
-    z-index: 1;
-    margin: 0;
+    /* margin-left: 15%; */
   }
-
   .sear.active {
     display: flex;
     flex-direction: row;
     height: 70px;
     align-items: center;
     background-color: #333;
-    margin-top: 30px;
+    margin-top: 0;
+    z-index: 999;
     opacity: 0.8;
   }
 }

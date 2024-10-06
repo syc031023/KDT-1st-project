@@ -87,7 +87,7 @@ section{
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 110px;
+    top: 88px;
     left: 0;
     width: 100%;
     background-color: #333;
@@ -111,7 +111,7 @@ section{
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 179px;
+    top: 173px;
     left: 0px;
     width: 100%;
     background-color: #333;
@@ -123,7 +123,7 @@ section{
     height: 70px;
     align-items: center;
     background-color: #333;
-    margin-top: 30px;
+    margin-top: 0px;
     z-index: 999;
     opacity: 0.8;
   }
