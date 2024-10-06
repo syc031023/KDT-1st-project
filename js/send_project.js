@@ -67,16 +67,8 @@ $(document).ready(function() {
             $('.startDate').append(festivalData["startDate"] + ' ' + week);
           } else if(key === "images") {
             console.log(festivalData['images'].length);
-            $('.backimg').css('background-image', `url(${festivalData[key][0]}`);
-            // 포스터 이미지
-            $('.box1').css('background-image', `url(${festivalData[key][1]})`);
-
-            $('.swi1').css('background-image', `url(${festivalData[key][2]})`);
-            $('.swi2').css('background-image', `url(${festivalData[key][3]})`);
-            $('.swi3').css('background-image', `url(${festivalData[key][4]})`);
-            $('.swi4').css('background-image', `url(${festivalData[key][5]})`);
-
-    
+            $('.backimg').css('background-image', `url(${festivalData[key][1]}`);
+           
           } else if (key == "more_info") {
               $('.homePageMove').append(`<a href="${festivalData[key]}" target="_blank"><button class="homepage">공식 홈페이지</button></a>`);
 

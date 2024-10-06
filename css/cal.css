@@ -22,7 +22,10 @@ body,html {
 #main {
   width: 100%;
 }
-
+a {
+  text-decoration: none;
+  color : #fff;
+}
 /* 축제가 없다고 출력할 p 태그 */
 .no-fastival {
   margin-top: 20px;

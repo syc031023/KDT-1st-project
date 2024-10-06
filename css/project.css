@@ -316,7 +316,8 @@ body {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #fff;
+  margin-left: 20px;
 }
 .pathmap {
   cursor: pointer;
@@ -341,13 +342,14 @@ a {
   justify-content: flex-start;
 }
 #container .box1 {
-  margin-left: 120px;
-  margin-right: 70px;
-  width: 510px;
-  height: 630px;
+  width: 450px;
+  height: 650px;
+  margin-left: 300px;
   margin-bottom: 100px;
   border-radius: 20px;
-  background-size: cover;
+  background-image: url("https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/fac40458-d12f-4963-8036-38d07a5155f7_3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #container.box2 {
   /* width: 400px; */

@@ -1,4 +1,5 @@
 [
+
     {
         "id": "Seoul-01",
         "name": "서대문 문화유산 야행",
@@ -93,6 +94,27 @@
         "youtube": "https://youtu.be/h5mJZoXhA44?si=MT1ONXBFovo_Zmzz",
         "category": "culture",
         "location": "서울 성북구"
+    },
+
+    {
+        "id": "Seoul-05",
+        "name": "서울 세계 불꽃 축제",
+        "startDate": "2024-10-05",
+        "endDate": "2024-10-05",
+        "address": "서울특별시 영등포구 여의동로 330 (여의도동) ",
+        "cost": "가격 무료 (일부 관람석 유료화)",
+        "contact": "02-519-9778",
+        "instagram": "",
+        "more_info": "https://www.hanwhafireworks.com/kor/main.html",
+        "describe": "여의도 한강공원 및 한강변 일대에서 열리는 한화그룹의 사회 공헌 행사",
+        "detail": "서울세계불꽃축제는 바쁜 매일을 살아가는 시민의 일상에 즐거움을 선사하기 위해 한화그룹에서 2000년부터 사회공헌 사업으로 꾸준히 진행해 온 축제이다. 매년 세계적인 수준의 불꽃 전문 기업들이 초청되어 여의도의 밤 하늘을 무대로 환상적인 불꽃 연출을 선보이며, 주간에도 다채로운 부대행사가 진행된다. (주)한화가 자랑하는 '멀티미디어 불꽃쇼'는 불꽃과 음악, 레이저 연출이 결합된 아시아 최고 수준의 불꽃쇼이다.",
+        "images": [
+            "https://www.hanwhafireworks.com/images/main/thumb01_01.jpg", 
+            "https://www.hanwhafireworks.com/images/main/img_mVisual01_normal.jpg"
+         ],
+         "youtube": "",
+        "category": "culture",
+        "location": "서울 여의도"
     },
     {
         "id": "Incheon-01",

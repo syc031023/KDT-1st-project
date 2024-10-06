@@ -247,20 +247,35 @@ $(document).ready(function(){
       }else {
         festivalData.forEach(festval => {
             // 'imges' 속성이 존재하고 배열인지 확인한 후 length 체크
-            if (festval["images"] && Array.isArray(festval["images"])) {
-              listWrap.append(
-                `
-                <div class = "list-wr-box">
-                    <a href = "../html/project.html?id=${festval['id']}" target="_blank">
-                      <div class="wr-img" style="background-image: url('${festval["images"][0]}');"></div>
-                    </a>
-                    <div class="wr-title">${festval['name']}</div>
-                    <div class="wr-date">${festval.startDate} - ${festval.endDate}</div>
-                    <div class="wr-loc">${festval['location']}</div>
-                </div>  
-                `
-              );
+            if (festval["images"] && Array.isArray(festval["images"]) && festval['id'] != 'Seoul-05') {
+              
+                listWrap.append(
+                  `
+                  <div class = "list-wr-box">
+                      <a href = "../html/detail.html?id=${festval['id']}" target="_blank">
+                        <div class="wr-img" style="background-image: url('${festval["images"][0]}');"></div>
+                      </a>
+                      <div class="wr-title">${festval['name']}</div>
+                      <div class="wr-date">${festval.startDate} - ${festval.endDate}</div>
+                      <div class="wr-loc">${festval['location']}</div>
+                  </div>  
+                  `
+                );
+                
+      
           } else {
+            listWrap.append(
+              `
+              <div class = "list-wr-box">
+                  <a href = "../html/project.html?id=${festval['id']}" target="_blank">
+                    <div class="wr-img" style="background-image: url('${festval["images"][0]}');"></div>
+                  </a>
+                  <div class="wr-title">${festval['name']}</div>
+                  <div class="wr-date">${festval.startDate} - ${festval.endDate}</div>
+                  <div class="wr-loc">${festval['location']}</div>
+              </div>  
+              `
+            );
               console.error("imges is undefined or not an array for festival ID: ", festval['id']);
           }
   
