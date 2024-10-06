@@ -45,6 +45,7 @@ body {
   margin-top: 0;
 }
 .logo1 {
+  cursor: pointer;
   font-size: 25px;
   /* margin-left: 300px; */
   padding-left: 300px;
@@ -67,6 +68,9 @@ body {
   position: relative;
   left: 800px;
   top: 25px;
+  cursor: pointer;
+}
+.fa-solid {
   cursor: pointer;
 }
 #navibar {
@@ -621,6 +625,7 @@ hr {
   justify-content: center;
 }
 .timer-label {
+  font-weight: bold;
   border: 1px solid white;
   padding: 5px 15px;
   border-radius: 99px;
