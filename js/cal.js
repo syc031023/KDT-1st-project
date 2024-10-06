@@ -45,8 +45,9 @@ $(document).ready(function(){
   
     // 달력데이터 출력하기
     // 날짜 객체 생성하기
-    let year = 2024;
-    let month = 8; // 0 시작 9월 기반
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth(); // 0 시작 9월 기반
   
     let dayAllMonth = new Date(year,month+1,0).getDate();
   
