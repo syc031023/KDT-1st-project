@@ -19,11 +19,13 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.header-logo-wrap {
+  width: 100%;
+  height: 90px;
+}
 
 .container {
   width: 100%;
-  height: 150px;
-  background-color: aquamarine;
 }
 /* 헤더영역 end */
 
@@ -34,11 +36,9 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  background-color: bisque;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 800px;
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .time-wrap {
@@ -55,6 +55,7 @@ header {
 }
 
 .wrap-title {
+  font-size: 1.6rem;
   text-align: center;
   width: 70%;
   height: 50px;
@@ -68,7 +69,7 @@ header {
 .ti-m {
   text-align: center;
   line-height: 90px;
-  width: 20%;
+  width: 21%;
   height: 90px;
   border : 3px solid #fff;
   border-radius: 20px;
@@ -102,6 +103,9 @@ header {
   bottom: 10px;
   font-size: 4rem;
   color: #fff;
+}
+.menuBtn {
+  height: 210px;
 }
 
 .event-day .eve {
@@ -155,6 +159,16 @@ header {
   color : #fff;
   font-weight: 900;
 }
+.d-end {
+  display: none;
+}
+.d-show {
+  display: block;
+}
+.fest-end {
+  background-color: #7b7a7a;
+}
+
 /* 행사 시작 날짜 표시 시계 밑에 */
 .set-period {
   width: 100%;
@@ -175,8 +189,8 @@ header {
   padding : 20px;
 }
 .title-img .box {
-  width: 380px;
-  height: 400px;
+  width: 100%;
+  height: 350px;
   margin-left: 9px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -195,9 +209,6 @@ header {
 
 .set-content-wrap {
   width: 100%;
-  /* 40vh 높이가 적당
-    더보기 클안했을때 고정값 높이
-  */
   height: 30vh;
 }
 /* 축제정보에 대한 디테일한 내용 */
@@ -206,7 +217,7 @@ header {
   width: 100%;
   height: 130px;
   font-weight: 900;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -225,7 +236,7 @@ header {
   border-radius: 20px;
   text-align: center;
   width: 13%;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   background-color: #640D5F;
   color : #fff;
   font-weight: 900;
@@ -249,41 +260,50 @@ header {
   position: relative;
   display: flex;
   width: 80%;
-  height: 80vh;
+  height: 600px;
+}
+
+#fest-wrap .fest-box .fest-title-img {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 #fest-wrap .fest-box > div {
+  margin : 0 auto;
   width: 100%;
-  height: 400px;
   margin-left : 30px;
 }
-#fest-wrap .fest-box .fest-title-img {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 .fest-content {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 .fest-content .ft {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 150px;
+
+}
+.address {
+  font-size: 1.2rem;
 }
 .fest-content .ft .ft-data {
   width: 80%;
-  height: auto;
+  height: 80px;
+  line-height: 80px;
   margin-left: 20px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
 
 .ft > .ft-icon {
+  
   display: inline-block;
   font-size: 42px;
   width: 60px;
@@ -318,4 +338,134 @@ header {
 }
 .ft-homePage-btn a:hover {
   color : #fff;
+}
+
+
+.footer {
+  width: 100%;
+  height: 300px;
+}
+
+@media only screen and (max-width: 1530px) { 
+  
+  #main-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+  }
+}
+
+@media only screen and (max-width: 1260px) { 
+  
+  .section-wrap .set-content {
+    margin-top: 10px;
+    width: 100%;
+    height: 160px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}
+
+
+@media only screen and (max-width: 870px) { 
+
+  #main-wrap {
+    height: auto;
+  }
+  .title-img .box {
+    width: 380px;
+    height: 260px;
+    margin-left: 9px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+  
+  #fest-wrap .fest-box {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 500px;
+  }
+
+  #fest-wrap .fest-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 600px;
+  }
+  .ft-fi {
+    position: absolute;
+    left : 170px;
+    bottom: -180px;
+  }
+
+  .time-wrap {
+    width: 35%;
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) { 
+
+ 
+  .title-img .box {
+    width: 100%;
+    height: 260px;
+    margin-left: 9px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+  
+
+}
+
+@media only screen and (max-width: 470px) { 
+
+ 
+  .title-img .box {
+    width: 100%;
+    height: 250px;
+    margin-left: 9px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.set-period {
+  width: 100%;
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 50px;
+  padding: 10px 0 10px 0;
+}
+.ft-homePage-btn {
+  text-align: center;
+  width: 50%;
+  border: 3px solid #7b7a7a;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 800;
+
+}
+
+.ft-fi {
+  position: absolute;
+  left: 110px;
+  bottom: -180px;
+}
 }

@@ -1,5 +1,68 @@
 $(document).ready(function() {
-  let JsonData = null;
+ 
+  // 배너 시계
+  function updateTime() {
+    let now = new Date();
+    for(let i = 0; i < JsonData.length; i++) {
+      if(data_result == JsonData[i].id) {
+        let stdate = new Date(JsonData[i].startDate);
+        let eDate = new Date(JsonData[i].endDate);
+
+        eDate.setHours(18,0,0,0);
+
+        // 남은 시간
+        let timeDiff = stdate - now;
+
+        let dayh = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(timeDiff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        let minutes = Math.floor(timeDiff % (1000 * 60 * 60) / (1000 * 60));
+        let seconds = Math.floor(timeDiff % (1000 * 60) / 1000);
+
+
+        if(now < stdate) {
+          $('.d-day').text("D - " + dayh);
+          $('.d-day').addClass('d-show')
+        } else if (now >= stdate && now <= eDate) {
+          $('.d-festing').addClass('d-show');
+        } else {
+          console.log('실행');
+          $('.fest-end').addClass('d-show');
+        }
+
+        // 남은 시간이 0보다 크면
+        if (timeDiff > 0) {
+          console.log('실행');
+
+          $('.dayh').text(dayh);
+          $('.hours').text(hours);
+          $('.minutes').text(minutes);
+          $('.seconds').text(seconds);
+      
+          
+          
+        } else {
+          dayh = '00'
+          hours = '00'
+          minutes = '00'
+          seconds = '00'
+
+          $('.dayh').text(dayh);
+          $('.hours').text(hours);
+          $('.minutes').text(minutes);
+          $('.seconds').text(seconds);
+        }
+
+      }
+    }
+
+
+  }
+
+
+  
+
+
+
 
   // 네비바 js
 const menuToggle = document.querySelector(".menu-toggle");
@@ -7,15 +70,9 @@ const navLinks = document.querySelector(".nav-links");
 const sear1 = document.querySelector(".sear");
 const header_logo = document.querySelector('.header-logo-wrap');
 
-console.log(header_logo);
-
-console.log(menuToggle);
-// 반응형 배너
-
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   sear1.classList.toggle("active");
-  header_logo.classList.toggle("menuBtn");
 
 });
 
@@ -38,6 +95,8 @@ menuToggle.addEventListener("click", () => {
   async function initialize() {
     await fetchData(); // 데이터를 들고온 다음에
     responseGetIdDetailPage();
+    updateTime();
+    setInterval(updateTime,1000);
   }
 
 
@@ -66,13 +125,11 @@ menuToggle.addEventListener("click", () => {
           category : JsonData[i].category,
           location : JsonData[i].location,
           contact : JsonData[i].contact,
-          images : JsonData[i].images
+          images : JsonData[i].images,
+          more_info : JsonData[i].more_info
         };
         
         for (const key in festivalData) {
-          console.log("key값 :", key);
-          console.log('festivalData[key]', festivalData[key]);
-          console.log('festivalData[key]', festivalData["images"][0]);
           if(key === "startDate") {
             // 기간 표시
             const startDate = festivalData[key];
@@ -85,8 +142,9 @@ menuToggle.addEventListener("click", () => {
             $('.box2').css('background-image', `url(${festivalData[key][4]})`);
             $('.box3').css('background-image', `url(${festivalData[key][5]})`);
             $('.box3').css('background-image', `url(${festivalData[key][6]})`);
-          } 
-          else {
+          } else if (key === "more_info") {   
+            $('.ft-homePage-btn').append(`<a href="${festivalData[key]}" target="_blank">공식 홈페이지</a>`);
+        } else {
             $(`.${key}`).append(festivalData[key]);
           }
         }
