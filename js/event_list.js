@@ -47,7 +47,22 @@ function displayFestivals(festivals) {
     if(window.screen.width > 390){
         festivals.forEach((event, index) => {
             if (index % 3 === 0) rows += '<tr>';
-            rows += `
+            if(event.id === 'Seoul-05'){
+                rows += `
+                <td class="content">
+                    <a href="../html/project.html?id=${event.id}" target="_blank">
+                        <img src="${event.images[0]}" alt="${event.name}">
+                    </a>
+                    <div class="info">
+                        <h3>${event.name}</h3>
+                        <p class="duration">${event.startDate} ~ ${event.endDate}</p>
+                        <p class="location">${event.location}</p>
+                    </div>
+                </td>
+            `;
+
+            } else {
+                rows += `
                 <td class="content">
                     <a href="../html/detail.html?id=${event.id}" target="_blank">
                         <img src="${event.images[0]}" alt="${event.name}">
@@ -59,6 +74,7 @@ function displayFestivals(festivals) {
                     </div>
                 </td>
             `;
+            }
             if ((index + 1) % 3 === 0) rows += '</tr>';
         });
     
@@ -74,20 +90,34 @@ function displayFestivals(festivals) {
     } else {
         // 화면 너비가 390 이하일 때, 한 줄에 1개씩 나열
         festivals.forEach((event) => {
-            rows += `
-                <tr>
-                    <td class="content">
-                        <a href="../html/detail.html?id=${event.id}" target="_blank">
-                            <img src="${event.images[0]}" alt="${event.name}">
-                        </a>
-                        <div class="info">
-                            <h3>${event.name}</h3>
-                            <p class="duration">${event.startDate} ~ ${event.endDate}</p>
-                            <p class="location">${event.location}</p>
-                        </div>
-                    </td>
-                </tr>
+            if(event.id === 'Seoul-05'){
+                rows += `
+                <td class="content">
+                    <a href="../html/project.html?id=${event.id}" target="_blank">
+                        <img src="${event.images[0]}" alt="${event.name}">
+                    </a>
+                    <div class="info">
+                        <h3>${event.name}</h3>
+                        <p class="duration">${event.startDate} ~ ${event.endDate}</p>
+                        <p class="location">${event.location}</p>
+                    </div>
+                </td>
             `;
+
+            } else {
+                rows += `
+                <td class="content">
+                    <a href="../html/detail.html?id=${event.id}" target="_blank">
+                        <img src="${event.images[0]}" alt="${event.name}">
+                    </a>
+                    <div class="info">
+                        <h3>${event.name}</h3>
+                        <p class="duration">${event.startDate} ~ ${event.endDate}</p>
+                        <p class="location">${event.location}</p>
+                    </div>
+                </td>
+            `;
+            }
         });
     }
 
