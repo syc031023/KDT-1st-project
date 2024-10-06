@@ -22,7 +22,7 @@ section{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #00239C;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -30,7 +30,7 @@ section{
 }
 
 .navbar .logo {
-  color: white;
+  color: #ed6a66;
   font-size: 40px;
   font-family: 'HSYeoleum20-Regular';
 }
@@ -49,6 +49,10 @@ section{
   color: white;
   text-decoration: none;
   font-size: 23px;
+}
+
+.nav-links a:hover{
+  color: #ed6a66;
 }
 
 .menu-toggle {
@@ -79,6 +83,7 @@ section{
   width: 50px;
   height: 45px;
   margin-left: 13px;
+  background-color: #ed6a66;
 }
 
 /* 반응형 디자인 */

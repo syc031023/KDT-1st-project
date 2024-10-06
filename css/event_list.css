@@ -42,7 +42,7 @@ section{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #00239C;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -52,8 +52,8 @@ section{
   font-size: 40px;
 }
 
-a {
-  color: white;
+.logo a {
+  color: #ed6a66;
   text-decoration: none;
 }
 
@@ -70,6 +70,10 @@ a {
   color: white;
   text-decoration: none;
   font-size: 23px;
+}
+
+.nav-links a:hover {
+  color: #ed6a66;
 }
 
 .menu-toggle {
@@ -100,6 +104,11 @@ a {
   height: 45px;
   margin-left: 13px;
 }
+
+button{
+  background-color: #ed6a66;
+}
+
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
