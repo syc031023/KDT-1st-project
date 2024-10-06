@@ -7,9 +7,6 @@ $(document).ready(function(){
   const sear1 = document.querySelector(".sear");
   const header_logo = document.querySelector('.header-logo-wrap');
   
-  console.log(header_logo);
-  
-  console.log(menuToggle);
   // 반응형 배너
   
   menuToggle.addEventListener("click", () => {
@@ -33,13 +30,13 @@ $(document).ready(function(){
   
       if (!response.ok) {
         // HTTP 상태코드가 200~299 아니면 오류처리
-        throw new Error(`Network response not ${response.status}`);
+        throw new Error(`Network error ${response.status}`);
       }
   
       JsonData = await response.json(); // 데이터 josn 변환
     } catch (error) {
       // 네트워크 오류 또는 경로 오류 등 모든 예외 처리
-      console.log('There has been a problem with your fetch : ', error);
+      console.log('경로 오류 발생 : ', error);
     }
   }
   
@@ -49,7 +46,7 @@ $(document).ready(function(){
     let month = 8; // 0 시작 9월 기반
   
     let dayAllMonth = new Date(year,month+1,0).getDate();
-  
+ 
     async function initialize() {
       await fetchData(); // 데이터를 들고온 다음에
       makeCal(year,month); // 달력 그리고
@@ -78,7 +75,6 @@ $(document).ready(function(){
   
   // 해당 날짜에 열리는 축제 개수 출력
   function festDataDay(date) {
-    console.log("해당날짜 : ", date);
     const dateVal = new Date(date);
     return JsonData.filter(festValue => {
       const start = new Date(festValue.startDate);
@@ -128,10 +124,13 @@ $(document).ready(function(){
           weekDayCount++;
       }
   
-      // 날짜 채우기
+      // 날짜 채우기 day : 1일부터
       while (dayCount <= dayAllMonth) {
+        // 현재 날짜를 2024-10-06 형식으로 변환한다.
           let fullDateOn = `${year}-${String(month + 1).padStart(2, '0')}-${String(dayCount).padStart(2, '0')}`;
+          // 변환된 날짜형식으로 festDataDay() (해당일자에 시작하는 이벤트와 끝나는 이벤트 정보를 불러오기)
           let fullDateValue = festDataDay(fullDateOn);
+          // 반환된 이벤트 값을 가져와주고 배열의 길이를 이용하여 변수에 담아준다.
           let festCnt = fullDateValue.length;
          
           // 일요일이면 새로운 줄
