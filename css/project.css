@@ -373,7 +373,7 @@ a {
 }
 #container .box1 {
   width: 450px;
-  height: 630px;
+  height: 580px;
   margin-bottom: 100px;
   border-radius: 20px;
   background-image: url("https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/fac40458-d12f-4963-8036-38d07a5155f7_3.jpg");
@@ -396,7 +396,6 @@ img.path {
   height: 510px;
 }
 .icon-text {
-  /* margin-left: 100px; */
   margin-top: 50px;
   display: flex;
   align-items: center; /* 아이콘과 텍스트를 수평 정렬 */
@@ -406,7 +405,6 @@ img.path {
   margin-right: 2px; /* 아이콘과 글씨 사이의 간격 조정 */
 }
 .path_1 {
-  /* margin-left: 100px; */
   font-weight: bold;
 }
 .youtube1 {
@@ -426,14 +424,12 @@ img.path {
   position: relative;
   top: 1px;
   bottom: 20px;
-  /* left: 100px; */
 }
 .img_box2 {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-bottom: 50px;
-  /* margin-left: 100px; */
 }
 .img_box2 img {
   width: 100%;
@@ -453,7 +449,7 @@ img.path {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
+  width: 300px;
   height: 300px;
 }
 .tag {
@@ -465,7 +461,7 @@ img.path {
 .travel {
   font-size: 23px;
   font-weight: 600;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 .plusdata b {
   background-color: #d8f2ff;
@@ -550,7 +546,6 @@ hr {
 }
 .map {
   position: relative;
-  /* left: 100px; */
   margin-bottom: 70px;
   display: flex;
   justify-content: center;
@@ -569,8 +564,6 @@ hr {
   position: relative;
   width: 100%;
   margin-top: 40px;
-  /* margin-left: 100px;
-  margin-right: 100px; */
   overflow: hidden;
 }
 .slideshow-container {
@@ -592,13 +585,11 @@ hr {
   font-size: 30px;
   font-weight: bold;
   position: relative;
-  /* margin-left: 160px; */
   margin-top: 70px;
 }
 .interaction-wrapper {
   margin-top: 90px;
   margin-bottom: 40px;
-  /* margin-left: 150px; */
   user-select: none;
 }
 .like-button,
