@@ -192,10 +192,25 @@ function isOngoing(event) {
   const startDate = new Date(event.startDate); // 축제 시작일
   const endDate = new Date(event.endDate); // 축제 종료일
 
-  console.log(today);
+  // 년도, 월, 일만 비교하기 위한 함수
+  function compareDates(date1, date2) {
+    return (
+      date1.getFullYear() === date2.getFullYear() &&
+      date1.getMonth() === date2.getMonth() &&
+      date1.getDate() === date2.getDate()
+    );
+  }
 
-  // 현재 날짜가 시작일과 종료일 사이에 있는지 확인
-  return today >= startDate && today <= endDate;
+  // 현재 날짜에서 년도, 월, 일 정보만 추출하여 비교
+  const todayStripped = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const startStripped = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+  const endStripped = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+
+  console.log(todayStripped);
+  console.log(startStripped, endStripped);
+
+  // 현재 날짜가 시작일과 종료일 사이에 있는지 확인 (시간 제외)
+  return todayStripped >= startStripped && todayStripped <= endStripped;
 }
 
 function displayFestivals(festivals) {

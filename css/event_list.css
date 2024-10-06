@@ -1,6 +1,13 @@
 @font-face {
-  font-family: 'DungGeunMo';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HSYeoleum20-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSYeoleum20-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +16,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'DungGeunMo'; */
+  font-family: 'GmarketSansMedium';
+  
 }
 
 
@@ -34,7 +42,7 @@ section{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #00239C;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -44,8 +52,8 @@ section{
   font-size: 40px;
 }
 
-a {
-  color: white;
+.logo a {
+  color: #ed6a66;
   text-decoration: none;
 }
 
@@ -62,6 +70,10 @@ a {
   color: white;
   text-decoration: none;
   font-size: 23px;
+}
+
+.nav-links a:hover {
+  color: #ed6a66;
 }
 
 .menu-toggle {
@@ -92,6 +104,11 @@ a {
   height: 45px;
   margin-left: 13px;
 }
+
+button{
+  background-color: #ed6a66;
+}
+
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {

@@ -1,9 +1,22 @@
-/* 네비바 css */
+@font-face {
+  font-family: 'HSYeoleum20-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSYeoleum20-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'GmarketSansMedium';
 }
 
 body{
@@ -26,15 +39,16 @@ section{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #00239C;
   position: fixed;
   width: 100%;
   z-index: 999;
 }
 
 .navbar .logo {
-  color: white;
+  color: #ed6a66;
   font-size: 40px;
+  font-family: 'HSYeoleum20-Regular';
 }
 
 .nav-links {
@@ -50,6 +64,10 @@ section{
   color: white;
   text-decoration: none;
   font-size: 23px;
+}
+
+.nav-links a:hover {
+  color: #ed6a66;
 }
 
 .menu-toggle {
@@ -79,6 +97,11 @@ section{
   width: 50px;
   height: 45px;
   margin-left: 13px;
+  background-color: #ed6a66;
+}
+
+.searbt:hover{
+  background-color: #ed6a66;
 }
 
 /* 반응형 디자인 */
@@ -163,7 +186,7 @@ section{
   /* color: white; */
   /* font-weight: bold; */
   /* text-align: center; */
-  background-color: #3333339b;
+  background-color: #3333330d;
   /* opacity: 1; */
 
   width: 40%;
@@ -173,7 +196,7 @@ section{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.241);
+  background-color: #00239C50;
   color: white;
   border: none;
   padding: 10px;
@@ -265,7 +288,7 @@ section{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.241);
+  background-color: #00239C50;
   color: white;
   border: none;
   padding: 10px;
@@ -288,9 +311,17 @@ section{
   justify-content: space-between;
 }
 
+.btd h1 {
+  background-color: #ed6a6690;
+}
+
 .btd1 {
   display: flex;
   align-items: center;
+}
+
+.btd1 h1{
+  background-color: #ed6a6690;
 }
 
 .cbt {

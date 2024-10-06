@@ -138,6 +138,7 @@ menuToggle.addEventListener("click", () => {
               $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
               $('.title-img').addClass('tit');
             } else {
+              console.log(festivalData.images);
               $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
               $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
               $('.box1').css('background-image', `url(${festivalData[key][3]})`);
