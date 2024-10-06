@@ -136,12 +136,20 @@ menuToggle.addEventListener("click", () => {
             const endDate = festivalData["endDate"];
             $('.period').append(startDate + '~' + endDate);
           } else if(key === "images") {
-            $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
-            $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
-            $('.box1').css('background-image', `url(${festivalData[key][3]})`);
-            $('.box2').css('background-image', `url(${festivalData[key][4]})`);
-            $('.box3').css('background-image', `url(${festivalData[key][5]})`);
-            $('.box3').css('background-image', `url(${festivalData[key][6]})`);
+            console.log(festivalData.images.length);
+            if(2 >= festivalData.images.length) {
+              $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
+              $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
+              $('.title-img').addClass('tit');
+            } else {
+              $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
+              $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
+              $('.box1').css('background-image', `url(${festivalData[key][3]})`);
+              $('.box2').css('background-image', `url(${festivalData[key][4]})`);
+              $('.box3').css('background-image', `url(${festivalData[key][5]})`);
+              $('.box3').css('background-image', `url(${festivalData[key][6]})`);
+            }
+
           } else if (key === "more_info") {   
             $('.ft-homePage-btn').append(`<a href="${festivalData[key]}" target="_blank">공식 홈페이지</a>`);
         } else {
