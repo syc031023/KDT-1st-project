@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>project</title>
+    <title>축제 상세페이지</title>
+    <link rel="icon" type="image/svg+xml" href="/files/img/favicon.ico" />
+    <link rel="stylesheet" href="/css/project.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
-      integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -21,32 +16,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../css/project.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../js/project.js"></script>
-
+    <script src="./project.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <!-- js -->
-    <script src="/js/send_project.js"></script>
   </head>
-
-  <body style="overflow-x: hidden">
+  <body>
     <script
       type="text/javascript"
       src="http://bpmaker.giffy.me/userdata/user/54/54797/2/parts.js"
@@ -55,14 +33,13 @@
     <!-- 1 content -->
     <div class="backimg">
       <div class="logo">
-        <span class="logo1">축제나루</span
+        <span class="logo1"> 코딩온 logo</span
         ><?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
       </div>
-      <div>
-        Icon Family Classic Select an Icon Style
-        <a href="/html/main.html"><i class="fa-solid fa-house fa-xl" style="color: #ffffff"></i></a>
+      <div id="serchba">
+        <i class="fa-solid fa-house fa-xl" style="color: #ffffff"></i>
         <span id="navibar"
-          >문화관광축제<a href="/html/event_list.html">전국축제</a><a href="/html/cal.html">축제달력</a></span
+          >문화관광축제&nbsp;&nbsp;전국축제 &nbsp;&nbsp;축제달력</span
         ><i
           class="fa-solid fa-magnifying-glass fa-2xl"
           style="color: #ffffff"
@@ -71,7 +48,10 @@
       <div class="overlay">
         <div class="first_content">
           <div class="smalltext">
-            <h3 class="describe"></h3>
+            <h3>
+              여의도 한강공원 및 한강변 일대에서 열리는 한화그룹의 사회 공헌
+              행사
+            </h3>
           </div>
         </div>
         <div class="textName">
@@ -86,7 +66,7 @@
         <!--  행사 날짜 표시 -->
         <div class="big">
           <div class="small">
-            <span><h3 class="startDate"></h3></span>
+            <span><h3>2024.10.05 SAT</h3></span>
           </div>
         </div>
         <!-- 디데이 날짜 자동으로 계산해주는 시스템 -->
@@ -115,41 +95,44 @@
     <div class="outer-container">
       <div class="inner-container">
         <!-- 2 content -->
-        <button id="live-chat">실시간 채팅 💬</button>
+        <button id="live-chat">문의하기 💬</button>
         <h3 class="detail">상세이미지</h3>
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="../files/img/detail/불꽃축제1.jpg" />
+        <div class="slideshow-wrapper">
+          <div class="slideshow-container">
+            <div class="slide">
+              <img src="/files/img/detail/불꽃축제1.jpg" alt="이미지 1" />
             </div>
-            <div class="swiper-slide">
-              <img src="../files/img/detail/불꽃축제2.jpg" />
+            <div class="slide">
+              <img src="/files/img/detail/불꽃축제2.jpg" alt="이미지 1" />
             </div>
-            <div class="swiper-slide">
-              <img src="../files/img/detail/불꽃축제3.jpg" />
+            <div class="slide">
+              <img src="/files/img/detail/불꽃축제3.jpg" alt="이미지 1" />
             </div>
-            <div class="swiper-slide">
-              <img src="../files/img/detail/붗꽃축제4.jpg" />
+            <div class="slide">
+              <img src="/files/img/detail/불꽃축제4.jpg" alt="이미지 4" />
             </div>
           </div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-next" style="color: white"></div>
-          <div class="swiper-button-prev" style="color: white"></div>
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar" style="color: white"></div>
         </div>
-
+        <!-- 하트,공유 표시 -->
         <div class="interaction-wrapper">
           <span class="like-button">❤</span>
           <span class="like-count">0</span>
-
           <span class="share-button">🔁</span>
           <span class="share-count">0</span>
         </div>
+        <div class="content_1">
+          서울세계불꽃축제는 바쁜 매일을 살아가는 시민의 일상에 즐거움을
+          선사하기 위해 한화그룹에서 2000년부터 사회공헌 사업으로 꾸준히 진행해
+          온 축제이다. 매년 세계적인 수준의 불꽃 전문 기업들이 초청되어 여의도의
+          밤 하늘을 무대로 환상적인 불꽃 연출을 선보이며, 주간에도 다채로운
+          부대행사가 진행된다. (주)한화가 자랑하는 '멀티미디어 불꽃쇼'는 불꽃과
+          음악, 레이저 연출이 결합된 아시아 최고 수준의 불꽃쇼이다.
 
-        <div class="content_1"></div>
+          <div class="button-wrapper">
+            <button class="more_button">더보기</button>
+          </div>
+        </div>
+
         <div class="plusText">
           [행사내용]
           <br />
@@ -161,9 +144,7 @@
         <hr />
         <br />
         <div id="container">
-          <div class="box1">
-         
-          </div>
+          <div class="box1"></div>
           <div class="box2">
             <div class="info">
               <div class="circle circle1">
@@ -182,7 +163,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text0 startDate"></h5>
+              <h5 class="text0">2024.10.05</h5>
             </div>
             <div class="info">
               <div class="circle circle2">
@@ -200,7 +181,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text0 address"></h5>
+              <h5 class="text0">서울특별시 영등포구 여의동로 330 (여의도동)</h5>
             </div>
             <div class="info">
               <div class="circle circle3">
@@ -224,7 +205,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1 cost">무료 (일부 관람석 유료화)</h5>
+              <h5 class="text1">무료 (일부 관람석 유료화)</h5>
             </div>
             <div class="info">
               <div class="circle circle4">
@@ -242,7 +223,7 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1 instagram"></h5>
+              <h5 class="text1">hawhadays</h5>
             </div>
             <div class="info">
               <div class="circle circle5">
@@ -261,10 +242,14 @@
                   />
                 </svg>
               </div>
-              <h5 class="text1 contact"></h5>
+              <h5 class="text1">02-519-9778</h5>
             </div>
-            <div class="homePageMove">
-              <!-- 공식 홈페이지 이동버튼 jqeury 생성 -->
+            <div>
+              <a
+                href="https://www.hanwhafireworks.com/kor/main.html"
+                class="home"
+                ><button class="homepage">공식 홈페이지</button>
+              </a>
             </div>
           </div>
         </div>
@@ -289,36 +274,46 @@
           <i class="fab fa-youtube" style="font-size: 40px; color: red"></i>
           <h2 class="youtube1">Youtube</h2>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gTh55p0_lb4?si=DFoUjFYJ9L0ZRYQG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          id="youtube_size"
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/embed/gTh55p0_lb4?si=BDlYCsJlyvbFtGh0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
         <hr />
         <br /><br />
-        <span class="plusdata"
-          ><h3><b>축제와 함께 즐기기 좋은 주변 여행지</b></h3></span
-        >
-        <div class="img_box2">
-          <div class="travel-box">
-            <a
-              href="https://map.naver.com/p/entry/place/38345004?lng=126.9882487&lat=37.5512164&placePath=%2Fhome&entry=plt&searchType=place"
-              target="_self"
-              ><img src="../files/img/detail//남산이미지.jpg" />
-            </a>
-            <span class="travel">남산서울타워</span>
-          </div>
-          <div class="travel-box">
-            <a
-              href="https://map.naver.com/p/entry/place/13034552?lng=126.9850839&lat=37.581354&placePath=%2Fhome&entry=plt&searchType=place"
-              target="_self"
-              ><img src="../files/img/detail/북촌 한옥마을.jpg" />
-            </a>
-            <span class="travel">북촌 한옥마을</span>
-          </div>
-          <div class="travel-box">
-            <a
-              href="https://map.naver.com/p/entry/place/11622432?lng=126.9840027&lat=37.5225273&placePath=%2Fhome&entry=plt&searchType=place"
-              target="_self"
-              ><img src="../files/img/detail/용산가족공원2.jpg" />
-            </a>
-            <span class="travel">용산가족공원</span>
+        <div>
+          <span class="plusdata"
+            ><h3><b>축제와 함께 즐기기 좋은 주변 여행지</b></h3></span
+          >
+          <div class="img_box2">
+            <div class="travel-box">
+              <a href="https://www.seoultower.co.kr/" target="_self"
+                ><img src="/files/img/detail/남산이미지.jpg" />
+              </a>
+              <span class="travel">남산서울타워</span>
+            </div>
+            <div class="travel-box">
+              <a
+                href="https://hanok.seoul.go.kr/front/hanokWeek.do"
+                target="_self"
+                ><img src="/files/img/detail/북촌 한옥마을.jpg" />
+              </a>
+              <span class="travel">북촌 한옥마을</span>
+            </div>
+            <div class="travel-box">
+              <a
+                href="https://parks.seoul.go.kr/template/sub/yongsan.do"
+                target="_self"
+                ><img src="/files/img/detail/용산가족공원2.jpg" />
+              </a>
+              <span class="travel">용산가족공원</span>
+            </div>
           </div>
         </div>
         <br />
@@ -334,7 +329,7 @@
               href="https://map.naver.com/p/entry/place/1619195092?lng=126.9253568&lat=37.5449567&placePath=%2Fhome&entry=plt&searchType=place"
               target="_self"
             >
-              <img src="../files/img/detail/타이프한강.jpg" />
+              <img src="/files/img/detail/타이프한강.jpg" />
             </a>
             <span class="travel">TYPE 한강점</span>
           </div>
@@ -342,7 +337,7 @@
             <a
               href="https://map.naver.com/p/directions/-/14130883.938418,4511801.5522557,%EC%9B%8C%ED%82%B9%EC%98%A8%EB%8D%94%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C,11605244,PLACE_POI/-/transit?c=15.00,0,0,0,dh"
               target="_self"
-              ><img src="../files/img/detail/워킹온더그라운드.jpg"
+              ><img src="/files/img/detail/워킹온더그라운드.jpg"
             /></a>
             <span class="travel">워킹온더클라우드</span>
           </div>
@@ -350,19 +345,21 @@
             <a
               href="https://map.naver.com/p/directions/-/14125180.1614807,4517300.3273795,%EC%99%80%EC%9D%B4%ED%82%A4%ED%82%A4%EB%A7%88%EC%BC%93,1205107838,PLACE_POI/-/transit?c=15.00,0,0,0,dh"
               target="_self"
-              ><img src="../files/img/detail/와이키키 마켓.png"
+              ><img src="/files/img/detail/와이키키 마켓.png"
             /></a>
             <span class="travel">와이키키마켓</span>
           </div>
         </div>
-
         <div class="end">
           <hr />
           <span
             >콘텐츠 관리부서 : 지역관광육성팀 축제 정보 등록/수정 문의 :
             02-1234-5678</span
           >
-          <span class="info2">관광정보 수정요청</span>
+          <span class="info2">
+            <i class="fa-solid fa-pen fa-sm" style="color: #c4c4c4"></i>
+            관광정보 수정요청</span
+          >
           <div style="font-weight: bold">
             자주 묻는 질문<button class="last_button">
               축제 지자체/유관부서</button
@@ -371,7 +368,6 @@
         </div>
       </div>
     </div>
-
     <script>
       const swiper = new Swiper(".swiper", {
         // Optional parameters
@@ -381,22 +377,19 @@
         pagination: {
           el: ".swiper-pagination",
         },
-
         // Navigation arrows
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-
         // And if we need scrollbar
         scrollbar: {
           el: ".swiper-scrollbar",
         },
       });
-
       //디데이 타이머
       function updateCountdown() {
-        const targetDate = new Date("2024-10-05T13:00:00").getTime();
+        const targetDate = new Date("2024-10-10T13:00:00").getTime();
         const now = new Date().getTime();
         const distance = targetDate - now;
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -405,7 +398,6 @@
         );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
         document.getElementById("days").innerText = String(days).padStart(
           2,
           "0"
@@ -422,18 +414,15 @@
           2,
           "0"
         );
-
         if (distance < 0) {
           clearInterval(interval);
           document.querySelector(".countdown").innerText = "D-Day has arrived!";
         }
       }
       const interval = setInterval(updateCountdown, 1000);
-
       //좋아요버튼 로직
       $(document).ready(function () {
         let count = 0;
-
         $(".like-button").click(function () {
           count++;
           $(".like-count").text(count);
@@ -442,13 +431,11 @@
       //공유하기버튼 로직
       $(document).ready(function () {
         let count = 0;
-
         $(".share-button").click(function () {
           count++;
           $(".share-count").text(count);
         });
       });
-
       //애니메이션
       function init() {
         var style = ["style1", "style2", "style3", "style4"];
@@ -461,17 +448,14 @@
           "opacity2",
           "opacity3",
         ];
-
         function getRandomArbitrary(min, max) {
           return Math.floor(Math.random() * (max - min)) + min;
         }
-
         var estrela = "";
         var qtdeEstrelas = 250;
         var noite = document.querySelector(".constelacao");
         var widthWindow = window.innerWidth;
         var heightWindow = window.innerHeight;
-
         for (var i = 0; i < qtdeEstrelas; i++) {
           estrela +=
             "<span class='estrela " +
@@ -488,16 +472,12 @@
             getRandomArbitrary(0, heightWindow) +
             "px;'></span>";
         }
-
         noite.innerHTML = estrela;
-
         // meteors
         var numeroAleatorio = 5000;
-
         setTimeout(function () {
           carregarMeteoro();
         }, numeroAleatorio);
-
         function carregarMeteoro() {
           setTimeout(carregarMeteoro, numeroAleatorio);
           numeroAleatorio = getRandomArbitrary(5000, 10000);
@@ -512,8 +492,50 @@
           }, 1000);
         }
       }
-
       window.onload = init;
+      //슬라이드쇼
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".slideshow-container");
+        const slides = container.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+
+        // 슬라이드 복제
+        slides.forEach((slide) => {
+          const clone = slide.cloneNode(true);
+          container.appendChild(clone);
+        });
+
+        function moveSlide() {
+          currentIndex++;
+          container.style.transition = "transform 0.5s ease";
+          container.style.transform = `translateX(-${currentIndex * 33.333}%)`;
+
+          if (currentIndex === totalSlides) {
+            setTimeout(() => {
+              container.style.transition = "none";
+              container.style.transform = "translateX(0)";
+              currentIndex = 0;
+            }, 500);
+          }
+        }
+        //2.5초마다 슬라이드 이동!
+        setInterval(moveSlide, 2500);
+      });
+
+      //더보기버튼
+      document
+        .querySelector(".more_button")
+        .addEventListener("click", function () {
+          const plusText = document.querySelector(".plusText");
+          if (plusText.style.maxHeight) {
+            plusText.style.maxHeight = null;
+            this.textContent = "더보기";
+          } else {
+            plusText.style.maxHeight = plusText.scrollHeight + "px";
+            this.textContent = "접기";
+          }
+        });
     </script>
   </body>
 </html>
