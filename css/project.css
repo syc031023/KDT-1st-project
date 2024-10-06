@@ -21,7 +21,6 @@
     background-color: transparent;
   }
 }
-
 /* 모바일 화면 (최소 390px 이상) */
 @media only screen and (max-width: 389px) {
   body {
@@ -34,6 +33,10 @@
 body {
   min-width: 390px;
 }
+body {
+  overflow-x: hidden;
+}
+
 .logo {
   width: 100%;
   height: 30px;
@@ -42,36 +45,42 @@ body {
   margin-top: 0;
 }
 .logo1 {
-  cursor: pointer;
   font-size: 25px;
-  margin-left: 300px;
+  /* margin-left: 300px; */
+  padding-left: 300px;
   font-weight: 500;
 }
 .backimg {
-  background-image: url("../files/img/detail/불꽃.jpg");
+  background-image: url("/files/img/detail/불꽃.jpg");
   background-size: cover;
+  width: 100vw;
   padding: 20px 0;
   height: 900px;
 }
 .fa-house {
   position: relative;
   top: 30px;
-  left: 10px;
+  left: 200px;
   cursor: pointer;
 }
 .fa-magnifying-glass {
   position: relative;
-  left: 750px;
+  left: 800px;
   top: 25px;
+  cursor: pointer;
 }
 #navibar {
   cursor: pointer;
   color: white;
-  font-weight: bold;
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 23px;
   position: relative;
-  left: 30px;
+  left: 280px;
   top: 35px;
+}
+#searchba {
+  position: relative;
+  left: 500px;
 }
 .fixed_text {
   margin-left: 17vw;
@@ -107,6 +116,7 @@ body {
 .first_content {
   position: relative;
   bottom: 80px;
+  /* left: 50px; */
 }
 .textName {
   text-align: center;
@@ -126,6 +136,10 @@ body {
   margin: 15px;
   position: relative;
   left: 100px;
+}
+#serchba {
+  margin-left: 90px;
+  margin-top: 10px;
 }
 .circle1 {
   background-color: rgba(255, 175, 180, 0.842);
@@ -167,10 +181,11 @@ body {
 }
 .img_box img {
   cursor: pointer;
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
   border-radius: 8%;
-  margin: -20px;
+  margin: 40px;
   flex-flow: row wrap;
   justify-content: space-between;
 }
@@ -179,12 +194,28 @@ body {
   flex-direction: column;
 }
 .content_1 {
-  margin-left: 150px;
-  margin-right: 150px;
   align-content: center;
   font-size: 20px;
   font-weight: 500;
   line-height: 40px;
+}
+.button-wrapper {
+  display: flex;
+  width: 100%;
+}
+.more_button {
+  width: 80px;
+  margin-left: auto;
+  margin-top: 10px;
+  border: 0;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  color: blue;
+  line-height: 32px;
+  &:hover {
+    color: rgb(80, 80, 205);
+  }
 }
 .d-daybox {
   margin-left: 25px;
@@ -316,8 +347,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #fff;
-  margin-left: 20px;
+  color: black;
 }
 .pathmap {
   cursor: pointer;
@@ -343,16 +373,13 @@ a {
 }
 #container .box1 {
   width: 450px;
-  height: 650px;
-  margin-left: 300px;
+  height: 580px;
   margin-bottom: 100px;
   border-radius: 20px;
   background-image: url("https://kfescdn.visitkorea.or.kr/kfes/upload/contents/db/fac40458-d12f-4963-8036-38d07a5155f7_3.jpg");
   background-size: contain;
-  background-repeat: no-repeat;
 }
 #container.box2 {
-  /* width: 400px; */
   height: 600px;
   background-color: white;
   margin-left: 40px;
@@ -369,7 +396,6 @@ img.path {
   height: 510px;
 }
 .icon-text {
-  margin-left: 100px;
   margin-top: 50px;
   display: flex;
   align-items: center; /* 아이콘과 텍스트를 수평 정렬 */
@@ -379,7 +405,6 @@ img.path {
   margin-right: 2px; /* 아이콘과 글씨 사이의 간격 조정 */
 }
 .path_1 {
-  margin-left: 100px;
   font-weight: bold;
 }
 .youtube1 {
@@ -407,14 +432,15 @@ img.path {
   margin-bottom: 50px;
 }
 .img_box2 img {
-  width: 350px;
+  width: 100%;
   height: 300px;
+
   object-fit: cover;
   border-radius: 30px;
   border: 0px solid transparent;
   transition: box-shadow 0.3s ease-in-out;
   margin-top: 50px;
-  margin-right: -25px;
+  margin-right: 1px;
 }
 .img_box2 img:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -423,7 +449,7 @@ img.path {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
+  width: 300px;
   height: 300px;
 }
 .tag {
@@ -435,7 +461,7 @@ img.path {
 .travel {
   font-size: 23px;
   font-weight: 600;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 .plusdata b {
   background-color: #d8f2ff;
@@ -514,15 +540,15 @@ hr {
 .plusText {
   color: black;
   font-size: 20px;
-  margin-top: 60px;
-  margin-bottom: 50px;
-  margin-left: 150px;
-  padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 .map {
   position: relative;
-  left: 100px;
   margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
 }
 .heart1 {
   background-color: transparent;
@@ -534,92 +560,36 @@ hr {
   margin-top: 300px;
   margin-bottom: 100px;
 }
-/* .swiper {
-  width: 1000px;
-  height: 600px;
-  margin-top: 50px;
-  border-radius: 8px;
-}
-.swiper > img {
-  width: 60%;
-  height: 600px;
-} */
-.slider {
+.slideshow-wrapper {
   position: relative;
-  overflow: hidden;
-  position: relative;
-  left: 250px;
-  width: 800px;
-  height: 600px;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-
-  animation: slider 7.5s infinite linear;
+  margin-top: 40px;
+  overflow: hidden;
 }
-
-.slide:nth-child(1) {
-  background-image: url(../files/img/detail/불꽃축제1.jpg);
-  animation-delay: 0;
+.slideshow-container {
+  cursor: pointer;
+  display: flex;
+  transition: transform 0.5s ease;
 }
-.slide:nth-child(2) {
-  background-image: url(../files/img/detail/불꽃축제2.jpg);
-  animation-delay: -2.5s;
+.slide {
+  flex: 0 0 33.333%;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
-.slide:nth-child(3) {
-  background-image: url(../files/img/detail/불꽃축제3.jpg);
-  animation-delay: -5s;
-}
-.slide:nth-child(4) {
-  background-image: url(../files/img/detail/붗꽃축제4.jpg);
-  animation-delay: -7.5s;
-}
-
-@keyframes slider {
-  0% {
-    transform: translateX(0);
-  }
-
-  26% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-100%);
-    animation-timing-function: step-end;
-  }
-  93% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-.swi1,
-.swi2,
-.swi3,
-.swi4 {
-  background-size: cover;
+.slide img {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
 }
 .detail {
   font-size: 30px;
   font-weight: bold;
   position: relative;
-  margin-left: 160px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 70px;
 }
 .interaction-wrapper {
-  margin-top: 20px;
+  margin-top: 90px;
   margin-bottom: 40px;
-  margin-left: 150px;
   user-select: none;
 }
 .like-button,
@@ -628,7 +598,7 @@ hr {
 }
 .outer-container {
   width: 100vw;
-  padding-left: 300px;
+  padding-left: 350px;
   padding-right: 300px;
   display: flex;
   justify-content: center;
@@ -671,7 +641,7 @@ hr {
   text-align: center;
 }
 #youtube_size {
-  margin-left: 100px;
+  /* margin-left: 100px; */
   margin-bottom: 100px;
 }
 /* 애니메이션 */
@@ -684,7 +654,6 @@ hr {
   );
   width: 100%;
 }
-
 .constelacao {
   position: absolute;
   left: 0;
@@ -693,7 +662,6 @@ hr {
   height: 100%;
   animation: rotate 600s infinite linear;
 }
-
 .estrela {
   background-color: white;
   border-radius: 50%;
@@ -702,7 +670,6 @@ hr {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 .estrela.style1 {
   animation-duration: 0.5s;
 }
@@ -715,7 +682,6 @@ hr {
 .estrela.style4 {
   animation-duration: 2s;
 }
-
 .estrela.tam1 {
   width: 1px;
   height: 1px;
@@ -728,7 +694,6 @@ hr {
   width: 3px;
   height: 3px;
 }
-
 .estrela.opacity1 {
   opacity: 1;
 }
@@ -738,7 +703,6 @@ hr {
 .estrela.opacity3 {
   opacity: 0.1;
 }
-
 .meteoro {
   position: absolute;
   background-color: #fff;
@@ -750,7 +714,6 @@ hr {
   animation-iteration-count: infinite;
   animation-duration: 1s;
 }
-
 .meteoro:before {
   content: "";
   display: inline-block;
@@ -765,7 +728,6 @@ hr {
   left: 2px;
   top: 0;
 }
-
 .meteoro.style1 {
   animation-name: meteoroStyle1;
 }
@@ -778,7 +740,6 @@ hr {
 .meteoro.style4 {
   animation-name: meteoroStyle4;
 }
-
 @keyframes estrela {
   0% {
     box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
@@ -790,7 +751,6 @@ hr {
     box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
   }
 }
-
 @keyframes meteoroStyle1 {
   0% {
     opacity: 0;
@@ -809,7 +769,6 @@ hr {
     top: 600px;
   }
 }
-
 @keyframes meteoroStyle2 {
   0% {
     opacity: 0;
@@ -828,7 +787,6 @@ hr {
     top: 600px;
   }
 }
-
 @keyframes meteoroStyle3 {
   0% {
     opacity: 0;
@@ -847,7 +805,6 @@ hr {
     top: 800px;
   }
 }
-
 @keyframes meteoroStyle4 {
   0% {
     opacity: 0;
@@ -866,7 +823,6 @@ hr {
     top: 800px;
   }
 }
-
 @keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -883,7 +839,7 @@ span.like-button {
 }
 .info2 {
   position: relative;
-  left: 500px;
+  left: 160px;
 }
 .last_button {
   border: 1px solid transparent;
@@ -891,16 +847,6 @@ span.like-button {
   margin-left: 10px;
   margin-bottom: 300px;
 }
-
-.slide {
-  animation: slider 7.5s infinite linear;
-}
-.slide:nth-child(1) {
-  animation-delay: 0;
-}
-.slide:nth-child(2) {
-  animation-delay: -2.5s;
-}
-.slide:nth-child(3) {
-  animation-delay: -5s;
+#plus_travel {
+  margin-left: 10px;
 }
