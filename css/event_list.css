@@ -1,8 +1,18 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: 'DungGeunMo'; */
 }
+
+
 
 section {
   margin: 0;
@@ -172,20 +182,28 @@ p {
   margin-top: 5px;
 }
 
-@media screen and (max-width: 608px) {
-  /* .selection div {
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 728px) {
+  .content {
+    width: 250px;
+    height: 320px;
+    margin: 0px;
   }
 
-  .selection {
-    width: 100%;
-    align-items: flex-end;
-    justify-content: flex-start;
-  } */
+  .info {
+    width: 230px;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  .content img {
+    left: 10px;
+    margin-top: 20px;
+    width: 230px;
+    height: 200px;
+  }
 }
 
-@media screen and (max-width: 728px) {
+@media screen and (max-width: 728px) and (min-width: 390px) {
   .content {
     width: 30%;
     /* height: 128px; */
@@ -231,23 +249,52 @@ p {
   }
 }
 
-@media screen and (width > 728px) {
+@media screen and (max-width: 390px) {
+  #location {
+    width: 130px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  #category {
+    width: 130px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  .sortEvent{
+    width: 50px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  
   .content {
-    width: 250px;
-    height: 320px;
+    width: 350px;
+    /* height: 320px; */
     margin: 0px;
+    display: flex;
+    /* border-bottom: 1px solid black ; */
   }
 
   .info {
-    width: 230px;
+    width: 150px;
     height: 100px;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+
+  .info h3 {
+    font-size: 90%;
+  }
+
+  .info p {
+    font-size: 80%;
   }
 
   .content img {
     left: 10px;
     margin-top: 20px;
-    width: 230px;
-    height: 200px;
+    width: 170px;
+    height: 150px;
   }
 }
