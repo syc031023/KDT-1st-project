@@ -1,13 +1,15 @@
 @font-face {
-  font-family: 'HSYeoleum20-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSYeoleum20-Regular.woff2') format('woff2');
+  font-family: "HSYeoleum20-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSYeoleum20-Regular.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,20 +18,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
 }
 
-body{
+body {
   min-width: 390px;
 }
 
-/* body { */
-/* font-family: Arial, sans-serif; */
-/* margin-left: 15%;
-  margin-right: 15%;
-} */
-
-section{
+section {
   position: relative;
   top: 87px;
 }
@@ -39,7 +35,7 @@ section{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #00239C;
+  background-color: #00239c;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -48,7 +44,7 @@ section{
 .navbar .logo {
   color: #ed6a66;
   font-size: 40px;
-  font-family: 'HSYeoleum20-Regular';
+  font-family: "HSYeoleum20-Regular";
 }
 
 .nav-links {
@@ -100,7 +96,7 @@ section{
   background-color: #ed6a66;
 }
 
-.searbt:hover{
+.searbt:hover {
   background-color: #ed6a66;
 }
 
@@ -113,7 +109,7 @@ section{
     top: 88px;
     left: 0;
     width: 100%;
-    background-color: #00239C;
+    background-color: #00239c;
     /* margin-left: 15%; */
     z-index: 999;
   }
@@ -145,7 +141,7 @@ section{
     flex-direction: row;
     height: 70px;
     align-items: center;
-    background-color: #00239C;
+    background-color: #00239c;
     margin-top: 0px;
     z-index: 999;
     opacity: 0.8;
@@ -171,24 +167,11 @@ section{
 .mainimg {
   height: 100%;
 }
-/* 
-.cars-d {
-  background-image: url(../files/img/main/seoul1.png);
-  opacity: 0.4;
-} */
 
 .cars-a {
-  /* flex: 1; */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* font-size: 2rem; */
-  /* color: white; */
-  /* font-weight: bold; */
-  /* text-align: center; */
   background-color: #3333330d;
-  /* opacity: 1; */
-
   width: 40%;
 }
 
@@ -196,7 +179,7 @@ section{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #00239C50;
+  background-color: #00239c50;
   color: white;
   border: none;
   padding: 10px;
@@ -212,8 +195,8 @@ section{
   right: 10px;
 }
 
-@media (width > 390px){
-  .event-container{
+@media (width > 390px) {
+  .event-container {
     width: 1000px;
   }
 }
@@ -224,11 +207,11 @@ section{
     width: 100%;
   }
 
-  .bocls button{
+  .bocls button {
     display: none;
   }
 
-  .event-container{
+  .event-container {
     width: 390px;
   }
 }
@@ -256,7 +239,6 @@ section{
 .card {
   flex: 0 0 30%;
   /* 카드가 3개씩 보이도록 설정 */
-  /* background-color: #f8f8f8; */
   padding: 20px;
   border-radius: 4%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -273,14 +255,8 @@ section{
   border-radius: 5%;
 }
 
-/* .card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-} */
-
-.card p, h3 {
-  /* font-size: 1rem;
-  color: #666; */
+.card p,
+h3 {
   margin: 0;
 }
 
@@ -288,23 +264,14 @@ section{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #00239C50;
+  background-color: #00239c50;
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   font-size: 40px;
   z-index: 1;
-  /* border-radius: 50%; */
 }
-
-/* .prev {
-  left: 10px;
-} */
-
-/* .next {
-  right: 10px;
-} */
 
 .btd {
   display: flex;
@@ -320,7 +287,7 @@ section{
   align-items: center;
 }
 
-.btd1 h1{
+.btd1 h1 {
   background-color: #ed6a6690;
 }
 
@@ -337,7 +304,6 @@ section{
   }
 }
 
-
 /* 컨테이너 스타일 */
 .event-container {
   display: flex;
@@ -347,13 +313,6 @@ section{
 
 /* 카드 스타일 */
 .card {
-  /* border: 1px solid #ddd;
-  border-radius: 6%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-  background-color: #fff; */
-
   overflow: hidden;
   width: 250px;
   height: 340px;
@@ -408,13 +367,6 @@ h2 {
   font-size: 24px;
   color: #333;
 }
-
-/* 반응형 디자인 */
-/* @media (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-} */
 
 @media (max-width: 480px) {
   h2 {
