@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- jquery -->
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+    integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- 달력 css -->
   <link rel="stylesheet" href="../css/cal.css">
   <!-- nav bar css -->
-   <link rel="stylesheet" href="../css/main.css">
-    <!-- 달력기능 js -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- 달력기능 js -->
   <!-- <script src="../js/cal.js"></script> -->
-   <!-- 달력수정할거 있음 테스트 파일 -->
-   <script src="../js/cal.js"></script>
+  <!-- 달력수정할거 있음 테스트 파일 -->
+  <script src="../js/cal.js"></script>
   <title>달력</title>
 </head>
-<body>  
+
+<body>
 
   <!-- 이벤트 (카테고리별로) :
 달력 : 은총
@@ -33,126 +39,128 @@
   <header>
     <div class="header-logo-wrap">
       <nav class="navbar">
-        <div class="logo"><a href="../html/main.html" style="font-family: 'HSYeoleum20-Regular'; color: #ed6a66;">축제나루</a></div>
+        <div class="logo"><a href="../index.html" style="font-family: 'HSYeoleum20-Regular'; color: #ed6a66;">축제나루</a>
+        </div>
         <!-- 메뉴 -->
         <ul class="nav-links">
-            <li><a href="../html/event_list.html">전국 축제</a></li>
-            <li><a href="../html/cal.html" style="color: #ed6a66;">달력</a></li>
+          <li><a href="../html/event_list.html">전국 축제</a></li>
+          <li><a href="../html/cal.html" style="color: #ed6a66;">달력</a></li>
         </ul>
         <!-- 서치바 -->
         <form class="sear" role="search">
-            <input class="searin" type="search" placeholder="Search" aria-label="Search" />
-            <button class="searbt" type="submit">
-                검색
-            </button>
+          <input class="searin" type="search" placeholder="Search" aria-label="Search" />
+          <button class="searbt" type="submit">
+            검색
+          </button>
         </form>
         <!-- 버튼 -->
         <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
       </nav>
     </div>
 
     </div>
   </header>
 
-  
-  <main id = main>
-    <div id = wrap>
+
+  <main id=main>
+    <div id=wrap>
       <section>
-        <div class = "month-info">
+        <div class="month-info">
           <h3>월별 축제 달력</h3>
           <!-- JS 데이터 출력 -->
-           <div class = "month-info-rab">
-            <span class = "date-span"></span>
-            <div class = "dir-rab">
-              <div class = "dir-cic dir prev">
+          <div class="month-info-rab">
+            <span class="date-span"></span>
+            <div class="dir-rab">
+              <div class="dir-cic dir prev">
                 <i class="fa-sharp fa-solid fa-arrow-left"></i>
               </div>
-              <div class = "dir-cic dir next">
+              <div class="dir-cic dir next">
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
-       </div>
-       
-       <div class="cal-info">
-          <table id = "calendar" cellpadding = "10" cellspacing = 0>
-            <thead>
-              <th>
-                <div class = "sun-d">일</div>
-              </th>
-              <th>
-                <div>월</div>
-              </th>
-              <th>
-                <div>화</div>
-              </th>
-              <th>
-                <div>수</div>
-              </th>
-              <th>
-                <div>목</div>
-              </th>
-              <th>
-                <div>금</div>
-              </th>
-              <th>
-                <div class = "sat-d">토</div>
-              </th>
-            </thead>
-            <tbody>
-                 <!-- js로 데이터 출력됨 -->
-            </tbody>
-          </table>
-       </div>
-       <!-- 날짜 미 클릭시 나올 사용자에게 보여줄 화면 -->
-       <section>
-        <div id = "no-wrap">
-          <div class = "inner">
-            <div>
-              <img src="../files/img/main/calenderSelect.png" alt="">
-            </div>
-            <p>달력에서 날짜를 선택해주세요</p>
-            <span>
-              선택한 날짜에 개최중인 모임 및 축제리스트를 정보를 제공합니다.
-            </span>
           </div>
-        </div>
-       </section>
-       <!-- 날짜 미 클릭시 나올 사용자에게 보여줄 화면 -->
 
-       <!-- 축제화면 클릭시 리스트로 보여줄 화면 -->
-       <section>
-        <div id = "all-list-wrap">
-          <div class = "list-logo">
-            <h1>축제 리스트</h1>
-            <span id ="scroll-top"><i class="fa-solid fa-circle-arrow-up"></i></span>
+          <div class="cal-info">
+            <table id="calendar" cellpadding="10" cellspacing=0>
+              <thead>
+                <th>
+                  <div class="sun-d">일</div>
+                </th>
+                <th>
+                  <div>월</div>
+                </th>
+                <th>
+                  <div>화</div>
+                </th>
+                <th>
+                  <div>수</div>
+                </th>
+                <th>
+                  <div>목</div>
+                </th>
+                <th>
+                  <div>금</div>
+                </th>
+                <th>
+                  <div class="sat-d">토</div>
+                </th>
+              </thead>
+              <tbody>
+                <!-- js로 데이터 출력됨 -->
+              </tbody>
+            </table>
           </div>
-          <hr>
-          <div class = "list-wrap">
-            
-            </div>              
-          </div>
+          <!-- 날짜 미 클릭시 나올 사용자에게 보여줄 화면 -->
+          <section>
+            <div id="no-wrap">
+              <div class="inner">
+                <div>
+                  <img src="../files/img/main/calenderSelect.png" alt="">
+                </div>
+                <p>달력에서 날짜를 선택해주세요</p>
+                <span>
+                  선택한 날짜에 개최중인 모임 및 축제리스트를 정보를 제공합니다.
+                </span>
+              </div>
+            </div>
+          </section>
+          <!-- 날짜 미 클릭시 나올 사용자에게 보여줄 화면 -->
+
+          <!-- 축제화면 클릭시 리스트로 보여줄 화면 -->
+          <section>
+            <div id="all-list-wrap">
+              <div class="list-logo">
+                <h1>축제 리스트</h1>
+                <span id="scroll-top"><i class="fa-solid fa-circle-arrow-up"></i></span>
+              </div>
+              <hr>
+              <div class="list-wrap">
+
+              </div>
+            </div>
         </div>
-       </section>
       </section>
-  </div>
-</main>
-<a href="http://" target="_blank" rel="noopener noreferrer"></a>
-<script>
-// 스크롤 이동 구현
-document.getElementById('scroll-top').addEventListener("click", function() {
-  window.scrollTo({
-    top : 0,
-    behavior : 'smooth'
-  });
-});
-</script>
+      </section>
+    </div>
+  </main>
+  <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+  <script>
+    // 스크롤 이동 구현
+    document.getElementById('scroll-top').addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 
 
 
 
 </body>
+
 </html>
