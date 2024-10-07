@@ -60,13 +60,10 @@ $(document).ready(function() {
             const endDate = festivalData["endDate"];
             $('.period').append(startDate + '~' + endDate);
             let stDate = new Date(festivalData["startDate"]);
-            console.log(stDate);
             const weekDay = ['sun','mon','Tue','wed','thr','fri','sat']
             let week = weekDay[stDate.getDay()];
-            console.log(week);
             $('.startDate').append(festivalData["startDate"] + ' ' + week);
           } else if(key === "images") {
-            console.log(festivalData['images'].length);
             $('.backimg').css('background-image', `url(${festivalData[key][1]}`);
            
           } else if (key == "more_info") {

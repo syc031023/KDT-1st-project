@@ -25,14 +25,11 @@ $(document).ready(function() {
         } else if (now >= stdate && now <= eDate) {
           $('.d-festing').addClass('d-show');
         } else {
-          console.log('실행');
           $('.fest-end').addClass('d-show');
         }
 
         // 남은 시간이 0보다 크면
         if (timeDiff > 0) {
-          console.log('실행');
-
           $('.dayh').text(dayh);
           $('.hours').text(hours);
           $('.minutes').text(minutes);
@@ -136,13 +133,11 @@ menuToggle.addEventListener("click", () => {
             const endDate = festivalData["endDate"];
             $('.period').append(startDate + '~' + endDate);
           } else if(key === "images") {
-            console.log(festivalData.images.length);
             if(2 >= festivalData.images.length) {
               $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
               $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
               $('.title-img').addClass('tit');
             } else {
-              console.log(festivalData.images);
               $('#main-wrap').css('background-image', `url(${festivalData[key][0]}`);
               $('.fest-title-img').css('background-image', `url(${festivalData[key][1]})`);
               $('.box1').css('background-image', `url(${festivalData[key][3]})`);
