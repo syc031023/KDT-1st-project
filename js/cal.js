@@ -7,9 +7,6 @@ $(document).ready(function(){
   const sear1 = document.querySelector(".sear");
   const header_logo = document.querySelector('.header-logo-wrap');
   
-  console.log(header_logo);
-  
-  console.log(menuToggle);
   // 반응형 배너
   
   menuToggle.addEventListener("click", () => {
@@ -79,7 +76,6 @@ $(document).ready(function(){
   
   // 해당 날짜에 열리는 축제 개수 출력
   function festDataDay(date) {
-    console.log("해당날짜 : ", date);
     const dateVal = new Date(date);
     return JsonData.filter(festValue => {
       const start = new Date(festValue.startDate);
