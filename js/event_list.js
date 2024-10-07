@@ -134,3 +134,5 @@ $(document).ready(async function() {
     await fetchData(); // JSON 데이터를 불러온 후
     displayFestivals(festdata);// 초기 화면에 모든 축제 표시
 });
+
+console.log("Hello World");
