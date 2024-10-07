@@ -17,64 +17,64 @@
 <body>
     <header>
         <div class="header-logo-wrap">
-          <nav class="navbar">
-            <div class="logo"><a href="../html/main.html" style="font-family: 'HSYeoleum20-Regular';">축제나루</a></div>
-            <!-- 메뉴 -->
-            <ul class="nav-links">
-                <li><a href="../html/event_list.html" style="color: #ed6a66;">전국 축제</a></li>
-                <li><a href="../html/cal.html">달력</a></li>
-            </ul>
-            <!-- 서치바 -->
-            <form class="sear" role="search">
-                <input class="searin" type="search" placeholder="검색어를 입력하세요." aria-label="Search" />
-                <button class="searbt" type="submit">
-                    검색
-                </button>
-            </form>
-            <!-- 버튼 -->
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-          </nav>
+            <nav class="navbar">
+                <div class="logo"><a href="./index.html" style="font-family: 'HSYeoleum20-Regular';">축제나루</a></div>
+                <!-- 메뉴 -->
+                <ul class="nav-links">
+                    <li><a href="../html/event_list.html" style="color: #ed6a66;">전국 축제</a></li>
+                    <li><a href="../html/cal.html">달력</a></li>
+                </ul>
+                <!-- 서치바 -->
+                <form class="sear" role="search">
+                    <input class="searin" type="search" placeholder="검색어를 입력하세요." aria-label="Search" />
+                    <button class="searbt" type="submit">
+                        검색
+                    </button>
+                </form>
+                <!-- 버튼 -->
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+            </nav>
         </div>
-    
+
         </div>
-      </header>
+    </header>
 
     <br><br>
     <section>
         <div class="selection">
             <!-- 지역별 카테고리 생성 -->
-                <select name="지역" id="location">
-                    <option value="location" selected>지역</option>
-                    <option value="서울">서울</option>
-                    <option value="인천">인천</option>
-                    <option value="대전">대전</option>
-                    <option value="대구">대구</option>
-                    <option value="광주">광주</option>
-                    <option value="부산">부산</option>
-                    <option value="울산">울산</option>
-                    <option value="세종시">세종시</option>
-                    <option value="경기도">경기도</option>
-                    <option value="강원특별자치도">강원특별자치도</option>
-                    <option value="충청북도">충청북도</option>
-                    <option value="충청남도">충청남도</option>
-                    <option value="경상북도">경상북도</option>
-                    <option value="경상남도">경상남도</option>
-                    <option value="전북특별자치도">전북특별자치도</option>
-                    <option value="전라남도">전라남도</option>
-                    <option value="제주도">제주도</option>
-                </select>
+            <select name="지역" id="location">
+                <option value="location" selected>지역</option>
+                <option value="서울">서울</option>
+                <option value="인천">인천</option>
+                <option value="대전">대전</option>
+                <option value="대구">대구</option>
+                <option value="광주">광주</option>
+                <option value="부산">부산</option>
+                <option value="울산">울산</option>
+                <option value="세종시">세종시</option>
+                <option value="경기도">경기도</option>
+                <option value="강원특별자치도">강원특별자치도</option>
+                <option value="충청북도">충청북도</option>
+                <option value="충청남도">충청남도</option>
+                <option value="경상북도">경상북도</option>
+                <option value="경상남도">경상남도</option>
+                <option value="전북특별자치도">전북특별자치도</option>
+                <option value="전라남도">전라남도</option>
+                <option value="제주도">제주도</option>
+            </select>
 
-                <!-- 종류별 카테고리 생성 -->
+            <!-- 종류별 카테고리 생성 -->
 
-                <select id="category">
-                    <option value="category" selected>카테고리</option>
-                    <option value="culture">문화예술</option>
-                    <option value="group_work">모임</option>
-                    <option value="contest">대회</option>
-                </select>
+            <select id="category">
+                <option value="category" selected>카테고리</option>
+                <option value="culture">문화예술</option>
+                <option value="group_work">모임</option>
+                <option value="contest">대회</option>
+            </select>
             <!-- 버튼 생성 -->
 
             <button class="sortEvent" onclick="filterEvents()">찾기</button>
