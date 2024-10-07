@@ -44,7 +44,7 @@ $(document).ready(function(){
     // 날짜 객체 생성하기
     let today = new Date();
     let year = today.getFullYear();
-    let month = today.getMonth(); // 0 시작 9월 기반
+    let month = today.getMonth(); // 현재 월에 대한 달력이 나오게
   
     let dayAllMonth = new Date(year,month+1,0).getDate();
  
@@ -278,10 +278,6 @@ $(document).ready(function(){
             );
               console.error("imges is undefined or not an array for festival ID: ", festval['id']);
           }
-  
-  
-  
-  
         });
       }
   
@@ -294,6 +290,5 @@ $(document).ready(function(){
   $('.prev, .next').on("click", function() {
     Datehendel();
   })
-  
   
   });
