@@ -126,7 +126,6 @@ function displayFestivals(festivals) {
 }
 
 window.addEventListener('resize', () => {
-    console.log(window.screen.width);
     displayFestivals(festdata);
 })
 
